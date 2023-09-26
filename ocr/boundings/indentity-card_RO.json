@@ -1,0 +1,79 @@
+{
+  "personalIdentificationNumber": {
+    "left": 176,
+    "top": 67,
+    "width": 119,
+    "height": 19,
+    "index": -1
+  },
+  "series": {
+    "left": 291,
+    "top": 53,
+    "width": 27,
+    "height": 18,
+    "index": 4
+  },
+  "number": {
+    "left": 335,
+    "top": 53,
+    "width": 64,
+    "height": 18,
+    "index": 5
+  },
+  "lastName": {
+    "left": 154,
+    "top": 95,
+    "width": 182,
+    "height": 19,
+    "index": 0
+  },
+  "firstName": {
+    "left": 154,
+    "top": 121,
+    "width": 182,
+    "height": 18,
+    "index": 1
+  },
+  "nationality": {
+    "left": 154,
+    "top": 147,
+    "width": 182,
+    "height": 19,
+    "index": 2
+  },
+  "gender": {
+    "left": 438,
+    "top": 148,
+    "width": 25,
+    "height": 19,
+    "index": 6
+  },
+  "placeOfBirth": {
+    "left": 154,
+    "top": 173,
+    "width": 245,
+    "height": 19,
+    "index": 3
+  },
+  "address": {
+    "left": 154,
+    "top": 198,
+    "width": 309,
+    "height": 39,
+    "index": 3
+  },
+  "issuedBy": {
+    "left": 154,
+    "top": 242,
+    "width": 167,
+    "height": 22,
+    "index": 7
+  },
+  "validity": {
+    "left": 328,
+    "top": 243,
+    "width": 168,
+    "height": 23,
+    "index": 8
+  }
+}
