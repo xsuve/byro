@@ -27,6 +27,7 @@ export function UploadForm() {
       }
 
       console.log(response);
+      setData('');
     } catch (error: any) {
       console.error(error.message);
     }
