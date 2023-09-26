@@ -3,6 +3,8 @@ import { createWorker } from 'tesseract.js';
 import sharp from 'sharp';
 import path from 'path';
 
+export const runtime = 'edge';
+
 export async function POST(request: NextRequest) {
   const formData = await request.formData();
   const file: File | null = formData.get('document') as unknown as File;
