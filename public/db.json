@@ -1,0 +1,12 @@
+{
+  "processes": [
+    {
+      "slug": "documente-necesare-inmatriculare-autovehicul",
+      "icon": "truck",
+      "title": "Înmatriculare autovehicul",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "createdAt": "2023-09-26T19:46:19.454+03:00",
+      "updatedAt": "2023-09-27T19:46:19.454+03:00"
+    }
+  ]
+}
