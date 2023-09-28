@@ -24,17 +24,16 @@ export const Process: FC<ProcessProps> = ({
   title,
   description,
   updatedAt,
-  className,
 }) => {
   return (
-    <Link href={`/proces/${slug}`}>
+    <Link href={`/documente-necesare/${slug}`}>
       <div
         className={clsx(
           'flex flex-col gap-y-4',
           'p-6 rounded-lg',
-          'ring-1 ring-inset ring-layout-border',
-          className
-        )}>
+          'ring-1 ring-inset ring-layout-border'
+        )}
+      >
         {cloneElement(ProcessIconMap[icon], {
           size: 'md',
           color: 'accent-primary',

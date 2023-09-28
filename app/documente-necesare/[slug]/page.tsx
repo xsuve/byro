@@ -1,7 +1,7 @@
 import { Section } from '@/components';
 import { getProcess } from '@/utils/db';
 
-export default async function ProcessPage({
+export default async function DocumenteNecesareSlugPage({
   params,
 }: {
   params: { slug: string };

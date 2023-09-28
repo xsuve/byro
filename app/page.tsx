@@ -19,7 +19,7 @@ export default function LandingPage() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor consectetur.
             </Text>
-            <Link href='/procese'>
+            <Link href='/documente-necesare'>
               <Button>Încearcă acum</Button>
             </Link>
           </div>
