@@ -11,7 +11,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'baskervville': ['Baskervville', 'sans-serif']
+        'baskervville': ['Baskervville', 'sans-serif'],
+        'josefin-sans': ['"Josefin Sans"', 'sans-serif']
       },
       colors: {
         // Layout

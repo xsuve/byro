@@ -8,7 +8,7 @@ export default function LandingPage() {
       <Nav />
       <div className='flex justify-center items-center py-24'>
         <div className='flex flex-col justify-center items-center gap-y-6'>
-          <div className='text-status-new bg-status-new-muted rounded-2xl inline-flex font-semibold text-sm px-3 py-1.5'>
+          <div className='text-status-new bg-status-new-muted rounded-2xl inline-flex font-medium text-sm px-3 py-1.5'>
             Toate procesele sunt actualizate săptămânal!
           </div>
           <div className='w-2/3 mx-auto text-center flex flex-col items-center gap-y-10'>

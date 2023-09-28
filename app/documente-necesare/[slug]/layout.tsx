@@ -1,4 +1,3 @@
-import '../../globals.css';
 import type { Metadata } from 'next';
 import { Logo } from '@/components/ui';
 import { ArrowLeftIcon } from '@heroicons/react/24/outline';
@@ -28,8 +27,7 @@ export default function DocumenteNecesareSlugLayout({
       <div className='px-24 pt-6'>
         <Link
           href='/documente-necesare'
-          className='inline-flex items-center gap-x-6'
-        >
+          className='inline-flex items-center gap-x-6'>
           <ArrowLeftIcon className='w-6 h-6' />
           <Logo />
         </Link>

@@ -35,8 +35,7 @@ export const Logo: FC<LogoProps> = ({
         'flex items-center font-bold text-lg',
         type === 'wordmark' && 'space-x-2',
         className
-      )}
-    >
+      )}>
       <svg
         version='1.1'
         xmlns='http://www.w3.org/2000/svg'
@@ -45,8 +44,7 @@ export const Logo: FC<LogoProps> = ({
         y='0px'
         viewBox='0 0 117.1 114.3'
         xmlSpace='preserve'
-        className={clsx('w-8 h-8', LogoColorMap[color].icon)}
-      >
+        className={clsx('w-8 h-8', LogoColorMap[color].icon)}>
         <path
           d='M108,66.6l0.1-0.2c10.5-10.7,10.5-27.9-0.1-38.5c-7.4-7.4-18.1-9.7-27.5-6.8c-0.1-5.1-2.1-10.2-6-14
 	C67-0.3,55.2-0.8,47.2,5.6c0,0,0,0-0.1,0l0,0l-3,3l-0.2,0.2l-6.2,6.2l22.3,22.3l6.6,6.6l3.2,3.2l6.5,6.4L95.8,73
@@ -61,7 +59,13 @@ export const Logo: FC<LogoProps> = ({
         />
       </svg>
       {type !== 'icon' ? (
-        <span className={clsx('text-2xl', LogoColorMap[color].text)}>Byro</span>
+        <span
+          className={clsx(
+            'font-josefin-sans font-bold text-2xl',
+            LogoColorMap[color].text
+          )}>
+          Byro
+        </span>
       ) : null}
     </div>
   );
