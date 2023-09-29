@@ -1,5 +1,4 @@
 import { Nav, Process, Section } from '@/components';
-
 import db from '../../public/db.json';
 import { Metadata } from 'next';
 
@@ -14,8 +13,7 @@ export default function DocumenteNecesarePage() {
       <Nav />
       <Section
         title='Documente necesare'
-        text='Lorem ipsum dolor amet consilur'
-      >
+        text='Lorem ipsum dolor amet consilur'>
         <div className='grid 2xl:grid-cols-4 xl:grid-cols-3 gap-6'>
           {db.processes.map((process, index) => (
             <Process

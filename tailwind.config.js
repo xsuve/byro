@@ -13,6 +13,7 @@ module.exports = {
       fontFamily: {
         baskervville: ['Baskervville', 'sans-serif'],
         poppins: ['var(--font-poppins)'],
+        'josefin-sans': ['"Josefin Sans"', 'sans-serif'],
       },
       colors: {
         aquamarine: '#01434c',

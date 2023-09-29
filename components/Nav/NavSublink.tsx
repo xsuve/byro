@@ -20,12 +20,7 @@ export const NavSublink: FC<NavSublinkProps> = ({
 }) => {
   return (
     <Link href={href}>
-      <div
-        className={clsx(
-          'flex items-center gap-x-3 rounded-md p-3 ring-1 ring-inset ring-layout-border h-full',
-          text ? 'justify-start' : 'justify-center'
-        )}
-      >
+      <div className='flex justify-start items-center gap-x-3 rounded-md p-3 ring-1 ring-inset ring-layout-border h-full'>
         {icon ? (
           <div
             className={clsx(
@@ -40,7 +35,7 @@ export const NavSublink: FC<NavSublinkProps> = ({
             })}
           </div>
         ) : null}
-        <div className='flex flex-col gap-y-0.5'>
+        <div className={clsx('flex flex-col gap-y-0.5', icon ? '' : 'px-3')}>
           <Text type='primary-bold'>{title}</Text>
           {text ? <Text type='tertiary'>{text}</Text> : null}
         </div>

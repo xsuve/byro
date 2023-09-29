@@ -30,14 +30,14 @@ const links: NavLinkProps[] = [
         disabled: false,
       },
       {
-        href: '/modele-documente',
+        href: '#',
         icon: <DocumentDuplicateIcon />,
         title: 'Modele documente',
         text: 'În curând!',
         disabled: true,
       },
       {
-        href: '/extrage-date',
+        href: '#',
         icon: <IdentificationIcon />,
         title: 'Extrage date',
         text: 'În curând!',
@@ -45,7 +45,8 @@ const links: NavLinkProps[] = [
       },
       {
         href: '/contribuie',
-        title: 'Propune idea ta!',
+        title: 'Propune soluție',
+        text: 'Vino cu o idee de funcționalitate pentru nevoile tale',
         disabled: false,
       },
     ],
