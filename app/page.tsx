@@ -27,7 +27,7 @@ export default function LandingPage() {
       </div>
       <div className='grid grid-cols-2 gap-x-12 px-24 pb-24 pt-12'>
         <div className='rounded-2xl p-12 bg-creamy flex flex-col items-start gap-y-10'>
-          <div className='text-primary bg-vermilion/30 rounded-full inline-flex font-semibold text-sm px-5 py-3'>
+          <div className='text-primary bg-vermilion/30 rounded-full inline-flex font-semibold text-sm px-4 py-2'>
             Documente necesare
           </div>
           <Heading type='landing-title' className='!text-5xl !leading-tight'>
@@ -42,7 +42,7 @@ export default function LandingPage() {
           </Link>
         </div>
         <div className='rounded-2xl p-12 bg-creamy flex flex-col items-start gap-y-10'>
-          <div className='text-primary bg-vermilion/30 rounded-full inline-flex font-semibold text-sm px-5 py-3'>
+          <div className='text-primary bg-aquamarine/30 rounded-full inline-flex font-semibold text-sm px-4 py-2'>
             Modele documente
           </div>
           <Heading type='landing-title' className='!text-5xl !leading-tight'>
