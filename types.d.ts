@@ -5,4 +5,5 @@ export interface Process {
   description: string;
   updatedAt: string;
   createdAt: string;
+  documents: string[];
 }

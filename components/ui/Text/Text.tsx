@@ -47,7 +47,8 @@ export const Text: FC<TextProps> = ({
         <a
           href={href}
           target={target}
-          className={clsx('inline-block cursor-pointer', className)}>
+          className={clsx('inline-block cursor-pointer', className)}
+        >
           <p className='font-medium text-accent-primary hover:text-primary'>
             {children}
           </p>

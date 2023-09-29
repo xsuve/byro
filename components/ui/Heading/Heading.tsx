@@ -15,7 +15,7 @@ const HeadingTypeMap = {
   },
   'page-title': {
     tag: 'h2',
-    className: 'text-2xl font-bold tracking-tight',
+    className: 'text-2xl font-semibold tracking-tight',
   },
   section: {
     tag: 'h3',

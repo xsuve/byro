@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import { DateTime } from 'luxon';
 import { Heading, Lozenge, Text } from '../ui';
 import Link from 'next/link';
-import { TruckIcon } from '@/icons';
+import { IdentificationIcon, TruckIcon } from '@heroicons/react/24/outline';
 
 type ProcessProps = {
   slug: string;
@@ -16,6 +16,7 @@ type ProcessProps = {
 
 const ProcessIconMap: { [icon: string]: JSX.Element } = {
   truck: <TruckIcon />,
+  identification: <IdentificationIcon />,
 };
 
 export const Process: FC<ProcessProps> = ({
@@ -35,8 +36,7 @@ export const Process: FC<ProcessProps> = ({
         )}
       >
         {cloneElement(ProcessIconMap[icon], {
-          size: 'md',
-          color: 'accent-primary',
+          className: 'w-9 h-9 text-vermilion stroke-[1.25]',
         })}
         <div className='flex flex-col gap-y-2'>
           <Heading type='section'>{title}</Heading>
@@ -51,7 +51,7 @@ export const Process: FC<ProcessProps> = ({
                 .toFormat('dd MMMM, yyyy')}
             </Text>
           </div>
-          <Lozenge color='new'>3 documente</Lozenge>
+          <Lozenge color='aquamarine'>3 documente</Lozenge>
         </div>
       </div>
     </Link>

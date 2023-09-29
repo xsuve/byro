@@ -7,7 +7,8 @@ type LozengeColor =
   | 'warning'
   | 'success'
   | 'info'
-  | 'new'
+  | 'vermilion'
+  | 'aquamarine'
   | 'neutral';
 type LozengeProps = {
   type?: LozengeType;
@@ -33,9 +34,13 @@ const LozengeColorMap = {
     default: 'text-status-info bg-status-info-muted',
     bold: 'text-white bg-status-info',
   },
-  new: {
-    default: 'text-status-new bg-status-new-muted',
-    bold: 'text-white bg-status-new',
+  vermilion: {
+    default: 'text-vermilion bg-vermilion/10',
+    bold: 'text-white bg-vermilion',
+  },
+  aquamarine: {
+    default: 'text-aquamarine bg-aquamarine/10',
+    bold: 'text-white bg-aquamarine',
   },
   neutral: {
     default: 'text-status-neutral bg-status-neutral-muted',
@@ -55,7 +60,8 @@ export const Lozenge: FC<LozengeProps> = ({
         'inline-flex items-center rounded-2xl px-2 py-0.5 font-semibold text-xs',
         LozengeColorMap[color][type],
         className
-      )}>
+      )}
+    >
       {children}
     </span>
   );

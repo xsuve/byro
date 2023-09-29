@@ -2,7 +2,7 @@ import { FC, ReactNode } from 'react';
 import clsx from 'clsx';
 
 type ButtonType = 'button' | 'submit';
-type ButtonColor = 'primary' | 'secondary';
+type ButtonColor = 'primary' | 'secondary' | 'vermilion';
 type ButtonProps = {
   type?: ButtonType;
   color?: ButtonColor;
@@ -17,13 +17,18 @@ type ButtonProps = {
 const ButtonColorMap = {
   primary: {
     text: 'text-white',
-    background: 'bg-accent-primary hover:bg-accent-secondary',
-    other: 'focus:ring-status-new-muted focus:ring-[3px] focus:outline-none',
+    background: 'bg-primary hover:bg-primary/95',
+    other: 'focus:ring-primary focus:ring-[3px] focus:outline-none',
   },
   secondary: {
     text: 'text-primary',
     background: 'bg-white hover:bg-layout-background',
     other: 'shadow-sm ring-1 ring-inset ring-gray-300',
+  },
+  vermilion: {
+    text: 'text-white',
+    background: 'bg-vermilion hover:bg-vermilion',
+    other: 'focus:ring-vermilion focus:ring-[3px] focus:outline-none',
   },
 };
 
@@ -69,10 +74,11 @@ export const Button: FC<ButtonProps> = ({
         disabled
           ? 'text-secondary bg-layout-border cursor-not-allowed'
           : Object.values(ButtonColorMap[color]).join(' '),
-        'font-medium rounded-full text-xs text-center',
+        'font-medium rounded-full text-sm text-center',
         'inline-flex items-center',
         className
-      )}>
+      )}
+    >
       {iconLeft}
       {children !== undefined && (
         <span
@@ -80,7 +86,8 @@ export const Button: FC<ButtonProps> = ({
             'py-1',
             iconLeft !== undefined && 'ml-0.5',
             iconRight !== undefined && 'mr-0.5'
-          )}>
+          )}
+        >
           {children}
         </span>
       )}

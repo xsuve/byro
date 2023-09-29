@@ -11,7 +11,7 @@ type LogoProps = {
 
 const LogoColorMap = {
   color: {
-    icon: 'fill-accent-primary',
+    icon: 'fill-vermilion',
     text: 'text-primary',
   },
   black: {
@@ -32,7 +32,7 @@ export const Logo: FC<LogoProps> = ({
   return (
     <div
       className={clsx(
-        'flex items-center font-bold text-lg',
+        'flex items-center font-semibold text-lg',
         type === 'wordmark' && 'space-x-2',
         className
       )}

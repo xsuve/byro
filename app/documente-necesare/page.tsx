@@ -2,7 +2,6 @@ import { Nav, Process, Section } from '@/components';
 
 import db from '../../public/db.json';
 import { Metadata } from 'next';
-import { DocumentTextIcon } from '@heroicons/react/24/outline';
 
 export const metadata: Metadata = {
   title: 'Byro - Documente și acte necesare',

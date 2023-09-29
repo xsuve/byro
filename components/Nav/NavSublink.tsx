@@ -30,12 +30,12 @@ export const NavSublink: FC<NavSublinkProps> = ({
           <div
             className={clsx(
               'w-10 h-10 rounded-full flex justify-center items-center flex-shrink-0',
-              disabled ? 'bg-status-neutral-muted' : 'bg-status-new-muted'
+              disabled ? 'bg-status-neutral-muted' : 'bg-vermilion/10'
             )}
           >
             {cloneElement(icon, {
               className: `w-5 h-5 ${
-                disabled ? 'text-status-neutral' : 'text-accent-primary'
+                disabled ? 'text-status-neutral' : 'text-vermilion'
               }`,
             })}
           </div>
