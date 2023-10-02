@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Logo } from '@/components/ui';
+import { Heading, Logo } from '@/components/ui';
 import { ArrowLeftIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { getProcess } from '@/utils/db';
@@ -12,8 +12,8 @@ export async function generateMetadata({
   const process = await getProcess(params.slug);
 
   return {
-    title: `Byro - Documente necesare ${process.title}`,
-    description: `Documente necesare pentru ${process.title}`,
+    title: `Byro - Documente necesare ${process.title.toLowerCase()}`,
+    description: `Documente necesare pentru ${process.title.toLowerCase()}`,
   };
 }
 
@@ -24,11 +24,15 @@ export default function DocumenteNecesareSlugLayout({
 }) {
   return (
     <main>
-      <div className='px-24 pt-6'>
+      <div className='px-24 pt-6 flex justify-between'>
         <Link
           href='/documente-necesare'
-          className='inline-flex items-center gap-x-6'>
+          className='inline-flex items-center gap-x-4'
+        >
           <ArrowLeftIcon className='w-6 h-6' />
+          <Heading type='section'>Procese</Heading>
+        </Link>
+        <Link href='/'>
           <Logo />
         </Link>
       </div>
