@@ -26,32 +26,36 @@ export default function LandingPage() {
         </div>
       </div>
       <div className='grid grid-cols-2 gap-x-12 px-24 pb-24 pt-12'>
-        <div className='rounded-2xl p-12 bg-creamy flex flex-col items-start gap-y-10'>
-          <div className='text-primary bg-vermilion/30 rounded-full inline-flex font-semibold text-sm px-4 py-2'>
-            Documente necesare
+        <div className='rounded-2xl p-12 bg-creamy flex flex-col justify-between gap-y-10'>
+          <div className='flex flex-col items-start gap-y-6'>
+            <div className='text-primary bg-vermilion/30 rounded-full inline-flex font-semibold text-sm px-4 py-2'>
+              Documente necesare
+            </div>
+            <Heading type='landing-title' className='!text-5xl !leading-tight'>
+              Verifică documentele necesare pentru nevoile tale
+            </Heading>
+            <Text type='landing-text'>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor.
+            </Text>
           </div>
-          <Heading type='landing-title' className='!text-5xl !leading-tight'>
-            Verifică de ce documente ai nevoie
-          </Heading>
-          <Text type='landing-text'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor.
-          </Text>
           <Link href='/documente-necesare'>
             <Button>Verifică documente</Button>
           </Link>
         </div>
-        <div className='rounded-2xl p-12 bg-creamy flex flex-col items-start gap-y-10'>
-          <div className='text-primary bg-aquamarine/30 rounded-full inline-flex font-semibold text-sm px-4 py-2'>
-            Modele documente
+        <div className='rounded-2xl p-12 bg-creamy flex flex-col justify-between gap-y-10'>
+          <div className='flex flex-col items-start gap-y-6'>
+            <div className='text-primary bg-aquamarine/30 rounded-full inline-flex font-semibold text-sm px-4 py-2'>
+              Modele documente
+            </div>
+            <Heading type='landing-title' className='!text-5xl !leading-tight'>
+              Descarcă modelele uzuale de documente
+            </Heading>
+            <Text type='landing-text'>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor.
+            </Text>
           </div>
-          <Heading type='landing-title' className='!text-5xl !leading-tight'>
-            Descarcă modelele uzuale de documente
-          </Heading>
-          <Text type='landing-text'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor.
-          </Text>
           <Link href='/modele-documente'>
             <Button>Descarcă modele</Button>
           </Link>
