@@ -13,7 +13,7 @@ export const StepsOption: FC<StepsOptionProps> = ({
 }) => {
   return (
     <button
-      className='rounded-md p-3 ring-1 ring-inset ring-layout-border bg-white hover:bg-layout-border'
+      className='rounded-md p-3 ring-1 ring-inset ring-layout-border bg-white 2xl:hover:bg-layout-border'
       onClick={() => onOptionClick(option.next, option.id)}
     >
       <Text type='primary-bold'>{option.label}</Text>

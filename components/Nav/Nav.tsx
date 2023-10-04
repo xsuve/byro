@@ -123,7 +123,7 @@ export const Nav: FC<NavProps> = () => {
       >
         {links.map((link, index) =>
           link.sublinks ? (
-            <div key={index} className='flex flex-col gap-y-4 order-1'>
+            <div key={index} className='flex flex-col gap-y-4 order-1 mt-2'>
               {link.sublinks.map((sublink, index) => (
                 <NavSublink
                   key={index}
