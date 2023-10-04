@@ -25,7 +25,7 @@ export default async function DocumenteNecesareSlugLayout({
   const process = await getProcess(params.slug);
 
   return (
-    <main className='h-screen bg-white grid grid-cols-3'>
+    <main className='2xl:h-screen bg-white grid 2xl:grid-cols-3 grid-cols-1'>
       <div className='col-span-1 flex'>
         <Side process={process} />
       </div>

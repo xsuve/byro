@@ -7,6 +7,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { StepsLines } from './StepsLines';
 import { StepsOptions } from './StepsOptions';
 import { ArrowLeftIcon } from '@heroicons/react/24/outline';
+import clsx from 'clsx';
 
 type StepsProps = {
   steps: ProcessStep[];
@@ -88,10 +89,17 @@ export const Steps: FC<StepsProps> = ({ steps }) => {
 
   return (
     <div className='flex justify-center'>
-      <div className='flex flex-col items-center gap-y-24'>
+      <div className='flex flex-col items-center 2xl:gap-y-24 gap-y-12'>
         <StepsLines steps={steps} currentStep={currentStep} />
         <div className='flex flex-col gap-y-12'>
-          <Heading type='page-title'>{currentStep.title}</Heading>
+          <Heading
+            type='page-title'
+            className={clsx(
+              currentStep.documents ? 'text-left' : 'text-center'
+            )}
+          >
+            {currentStep.title}
+          </Heading>
           <div className='flex flex-col items-center gap-y-12'>
             <div className='flex justify-end items-center gap-x-4'>
               <StepsOptions
@@ -105,7 +113,7 @@ export const Steps: FC<StepsProps> = ({ steps }) => {
               {currentStep.id !== steps[0].id && (
                 <button onClick={handleBackClick}>
                   <div className='flex items-center gap-x-4'>
-                    <ArrowLeftIcon className='w-6 h-6 text-secondary' />
+                    <ArrowLeftIcon className='2xl:w-6 w-5 2xl:h-6 h-5 text-secondary' />
                     <Heading type='label'>Înapoi</Heading>
                   </div>
                 </button>

@@ -30,8 +30,10 @@ export const StepsOptions: FC<StepsOptionsProps> = ({
                 <li key={index} className='list-decimal leading-loose pl-2'>
                   <Text type='primary-bold'>{document.title}</Text>
                   {document.description &&
-                    document.description.map((description) => (
-                      <Text type='secondary'>{description}</Text>
+                    document.description.map((description, index) => (
+                      <Text key={index} type='secondary'>
+                        {description}
+                      </Text>
                     ))}
                   {document.download && (
                     <Link

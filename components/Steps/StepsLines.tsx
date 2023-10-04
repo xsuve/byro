@@ -16,7 +16,7 @@ export const StepsLines: FC<StepsLinesProps> = ({ steps, currentStep }) => {
             <div
               key={index}
               className={clsx(
-                'w-[100px] h-1 rounded-full',
+                '2xl:w-[100px] w-[80px] h-1 rounded-full',
                 currentStep.id === step.id ? 'bg-vermilion' : 'bg-layout-border'
               )}
             ></div>

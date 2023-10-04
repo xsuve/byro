@@ -1,8 +1,11 @@
-import { FC } from 'react';
+'use client';
+
+import { FC, useState } from 'react';
 import clsx from 'clsx';
 import { Logo, Text } from '../ui';
 import Link from 'next/link';
 import {
+  Bars3Icon,
   ChevronDownIcon,
   DocumentDuplicateIcon,
   DocumentTextIcon,
@@ -58,15 +61,19 @@ const links: NavLinkProps[] = [
 ];
 
 export const Nav: FC<NavProps> = () => {
+  const [menuToggled, setMenuToggled] = useState(false);
+
   return (
-    <nav className={clsx('bg-white py-6 px-24 grid grid-cols-2 gap-x-12')}>
+    <nav
+      className={clsx('bg-white py-6 2xl:px-24 px-6 grid grid-cols-2 gap-x-12')}
+    >
       <div className='flex items-center gap-x-24'>
         <div className='flex justify-start items-center'>
           <Link href='/'>
             <Logo />
           </Link>
         </div>
-        <div className='flex justify-start items-center gap-x-10'>
+        <div className='2xl:flex hidden justify-start items-center gap-x-10'>
           {links.map((link, index) =>
             link.sublinks ? (
               <div className='cursor-pointer relative group' key={index}>
@@ -95,10 +102,48 @@ export const Nav: FC<NavProps> = () => {
           )}
         </div>
       </div>
-      <div className='flex justify-end items-center gap-x-10'>
-        <Link href='/contact'>
-          <Text type='primary-bold'>Contact</Text>
-        </Link>
+      <div className='flex justify-end items-center'>
+        <div className='2xl:flex hidden justify-end items-center gap-x-10'>
+          <Link href='/contact'>
+            <Text type='primary-bold'>Contact</Text>
+          </Link>
+        </div>
+        <div className='2xl:hidden flex justify-end items-center'>
+          <Bars3Icon
+            className='w-6 h-6 text-secondary cursor-pointer'
+            onClick={() => setMenuToggled(!menuToggled)}
+          />
+        </div>
+      </div>
+      <div
+        className={clsx(
+          menuToggled ? 'flex flex-col gap-y-2 col-span-2' : 'hidden',
+          'py-6'
+        )}
+      >
+        {links.map((link, index) =>
+          link.sublinks ? (
+            <div key={index} className='flex flex-col gap-y-4 order-1'>
+              {link.sublinks.map((sublink, index) => (
+                <NavSublink
+                  key={index}
+                  href={sublink.href}
+                  title={sublink.title}
+                  text={sublink.text}
+                  icon={sublink.icon}
+                  disabled={sublink.disabled}
+                />
+              ))}
+            </div>
+          ) : (
+            <NavLink
+              href={link.href}
+              title={link.title}
+              className='order-0'
+              key={index}
+            />
+          )
+        )}
       </div>
     </nav>
   );

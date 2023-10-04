@@ -36,7 +36,7 @@ export const Process: FC<ProcessProps> = ({
         )}
       >
         {cloneElement(ProcessIconMap[icon], {
-          className: 'w-9 h-9 text-vermilion stroke-[1.25]',
+          className: '2xl:w-9 w-7 2xl:h-9 h-7 text-vermilion stroke-[1.25]',
         })}
         <div className='flex flex-col gap-y-2'>
           <Heading type='section'>{title}</Heading>

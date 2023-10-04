@@ -9,6 +9,7 @@ export type NavSublinkProps = {
   title: string;
   text?: string;
   disabled?: boolean;
+  className?: string;
 };
 
 export const NavSublink: FC<NavSublinkProps> = ({
@@ -17,9 +18,10 @@ export const NavSublink: FC<NavSublinkProps> = ({
   title,
   text,
   disabled = false,
+  className,
 }) => {
   return (
-    <Link href={href}>
+    <Link href={href} className={clsx(className)}>
       <div className='flex justify-start items-center gap-x-3 rounded-md p-3 ring-1 ring-inset ring-layout-border h-full'>
         {icon ? (
           <div

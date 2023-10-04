@@ -9,7 +9,7 @@ export default async function DocumenteNecesareSlugPage({
   const process = await getProcess(params.slug);
 
   return (
-    <div className='px-24 py-12 w-full'>
+    <div className='2xl:px-24 px-6 py-12 w-full'>
       <Steps steps={process.steps} />
     </div>
   );
