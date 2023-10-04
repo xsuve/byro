@@ -11,9 +11,7 @@ export default function DocumenteNecesarePage() {
   return (
     <main>
       <Nav />
-      <Section
-        title='Documente necesare'
-        text='Lorem ipsum dolor amet consilur'>
+      <Section>
         <div className='grid 2xl:grid-cols-4 xl:grid-cols-3 gap-6'>
           {db.processes.map((process, index) => (
             <Process

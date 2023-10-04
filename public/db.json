@@ -7,7 +7,162 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
       "createdAt": "2023-09-26T19:46:19.454+03:00",
       "updatedAt": "2023-09-27T19:46:19.454+03:00",
-      "documents": []
+      "steps": [
+        {
+          "id": "stare",
+          "title": "Care este starea autovehiculului?",
+          "options": [
+            {
+              "id": "nou",
+              "label": "Nou",
+              "next": "achizitie"
+            },
+            {
+              "id": "second-hand",
+              "label": "Second-Hand",
+              "next": "inmatriculare"
+            }
+          ],
+          "documents": null
+        },
+        {
+          "id": "achizitie",
+          "title": "Unde a fost achiziționat autovehiculul?",
+          "options": [
+            {
+              "id": "in-ue",
+              "label": "În UE",
+              "next": "nou-in-ue"
+            },
+            {
+              "id": "in-afara-ue",
+              "label": "În afara UE",
+              "next": "nou-in-afara-ue"
+            }
+          ],
+          "documents": null
+        },
+        {
+          "id": "inmatriculare",
+          "title": "Unde este înmatriculat autovehiculul?",
+          "options": [
+            {
+              "id": "in-romania",
+              "label": "În Romania",
+              "next": "second-hand-in-romania"
+            },
+            {
+              "id": "in-ue",
+              "label": "În UE",
+              "next": "second-hand-in-ue"
+            },
+            {
+              "id": "in-afara-ue",
+              "label": "În afara UE",
+              "next": "second-hand-in-afara-ue"
+            }
+          ],
+          "documents": null
+        },
+        {
+          "id": "nou-in-ue",
+          "title": "Documente necesare înmatriculare autovehicul nou din UE",
+          "options": null,
+          "documents": [
+            {
+              "id": "cerere-solicitant",
+              "title": "Cererea solicitantului",
+              "description": [
+                "În cazul înscrierii în certificatul de înmatriculare şi a altei persoane, datele acesteia se vor înscrie în cuprinsul cererii."
+              ],
+              "download": null
+            },
+            {
+              "id": "dovada-inregistrare",
+              "title": "Dovada înregistrării în evidențele organului fiscal al autorității publice locale în a cărui rază de competență proprietarul (sau utilizatorul în cazul vehiculelor care fac obiectul unui contract de leasing financiar) își are domiciliul, sediul ori reședința în cazul persoanelor fizice cu domiciliul în străinătate",
+              "description": [
+                "Aceasta constă în înscrierea numărului de înregistrare în Registrul de evidenţă a mijloacelor de transport supuse înmatriculării/înregistrării, pe actul de înstrăinare-dobândire. În cazul înmatriculării temporare a vehiculelor ce urmează a fi înmatriculate în alt stat nu este necesară depunerea dovezii înregistrării în evidențele organului fiscal al autorității publice locale."
+              ],
+              "download": null
+            },
+            {
+              "id": "dovada-plata",
+              "title": "Dovada plăţii contravalorii certificatului de înmatriculare - 49 lei",
+              "description": [
+                "Pentru modalitățile de plată consultați secțiunea taxe și tarife."
+              ],
+              "download": null
+            },
+            {
+              "id": "act-identitate",
+              "title": "Actul de identitate al solicitantului, în original",
+              "description": null,
+              "download": null
+            },
+            {
+              "id": "procura-notar",
+              "title": "Procura specială autentificată de notarul public",
+              "description": [
+                "În cazul în care documentele se depun de o altă persoană decât proprietarul vehiculului."
+              ],
+              "download": null
+            },
+            {
+              "id": "contract-asigurare-raspundere-civila-auto",
+              "title": "Copia contractului de asigurare de răspundere civilă auto obligatorie pentru prejudicii produse terţilor prin accidente de vehicule şi de tramvaie (RCA), încheiat pe numele proprietarului vehiculului, în termenul de valabilitate al acestuia.",
+              "description": null,
+              "download": null
+            },
+            {
+              "id": "drept-de-proprietate",
+              "title": "Documentul care atestă dreptul de proprietate al solicitantului în forma prevăzută de lege la data dobândirii dreptului de proprietate, în original şi în copie, înregistrat în Registrul de evidență a mijloacelor de transport supuse înmatriculării/înregistrării în România, instituit la nivelul organului fiscal local",
+              "description": [
+                "În situaţia în care în certificatul de înmatriculare urmează a fi înscrisă şi o altă persoană, se va prezenta şi documentul care să ateste dreptul legal în virtutea căruia persoana poate folosi vehiculul, în original şi în copie.",
+                "În cazul în care vehiculul este folosit în sistem leasing se poate prezenta un extras din contractul de leasing, care să conţină cel puţin părţile, obiectul şi durata contractului, datele de identificare ale vehiculului şi semnăturile părţilor, în original şi copie."
+              ],
+              "download": null
+            },
+            {
+              "id": "altele",
+              "title": "În cazul vehiculelor achiziționate dintr-un stat membru UE, dacă persoana care solicită înmatricularea acestuia este și cea care a realizat achiziția intracomunitară și nu este înregistrată în scopuri de TVA conform art. 316 din Legea nr. 227/2015, cu modificările și completările ulterioare, pe lângă documentele prevăzute la alin. (1), aceasta trebuie să depună, după caz:",
+              "description": [
+                "Formularul 'Certificat privind atestarea plății taxei pe valoarea adăugată, în cazul achizițiilor intracomunitare de mijloace de transport', emis de ANAF și prevăzut de Ordinul președintelului Agenției Naționale de Administrare Fiscală pentru aprobarea modelului și conținutului formularelor 'Certificat privind atestarea plății taxei pe valoarea adăugată, în cazul achizițiilor intracomunitare de mijloace de transport' și 'Certificat', precum și a procedurii de eliberare a acestora.",
+                "SAU",
+                "Formularul 'Certificat', emis de ANAF și prevăzut de Ordinul președintelui Agenției Naționale de Administrare Fiscală pentru aprobarea modelului și conținutului formularelor 'Certificat privind atestarea plății taxei pe valoarea adăugată, în cazul achizițiilor intracomunitare de mijloace de transport' și 'Certificat', precum și a procedurii de eliberare a acestora."
+              ],
+              "download": null
+            },
+            {
+              "id": "carte-identitate-vehicul",
+              "title": "Cartea de identitate a vehiculului, în original şi copie",
+              "description": null,
+              "download": null
+            },
+            {
+              "id": "placute-numar-inmatriculare",
+              "title": "Plăcuţele cu numărul de înmatriculare a cărui combinație a fost păstrată anterior de către solicitant",
+              "description": [
+                "În măsura în care acesta intenționează atribuirea combinației păstrate, cu ocazia înmatriculării. Acestea se restituie pe loc solicitantului numai dacă îndeplinesc cerințele impuse de standardele în vigoare, iar combinația numărului de înmatriculare nu a fost restricționată conform legii."
+              ],
+              "download": null
+            },
+            {
+              "id": "dovada-plata-placute",
+              "title": "Dovada plăţii contravalorii plăcuţelor cu numărul de înmatriculare",
+              "description": [
+                "Cu excepţia cazului în care acesta solicită atribuirea unei combinații a numărului de înmatriculare păstrate anterior. lata se face prin internet banking, virament bancar, mandat poștal în contul trezoreriei statului (vezi lista conturi - unitati teritoriale) sau numerar la ghișeu odată cu depunerea documentelor."
+              ],
+              "download": null
+            }
+          ]
+        },
+        {
+          "id": "nou-in-afara-ue",
+          "title": "Documente necesare înmatriculare autovehicul nou din afara UE",
+          "options": null,
+          "documents": []
+        }
+      ]
     },
     {
       "slug": "schimbare-buletin",
@@ -16,7 +171,7 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
       "createdAt": "2023-09-26T19:46:19.454+03:00",
       "updatedAt": "2023-09-27T19:46:19.454+03:00",
-      "documents": []
+      "steps": []
     }
   ]
 }

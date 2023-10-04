@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
-import { Heading, Text, Logo } from '@/components/ui';
-import { ArrowLeftIcon, FlagIcon } from '@heroicons/react/24/outline';
-import Link from 'next/link';
 import { getProcess } from '@/utils/db';
+import { Side } from '@/components';
 
 export async function generateMetadata({
   params,
@@ -17,32 +15,21 @@ export async function generateMetadata({
   };
 }
 
-export default function DocumenteNecesareSlugLayout({
+export default async function DocumenteNecesareSlugLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: { slug: string };
 }) {
+  const process = await getProcess(params.slug);
+
   return (
-    <main>
-      <div className='px-24 pt-6 flex justify-between'>
-        <div className='flex items-center gap-x-12'>
-          <Link
-            href='/documente-necesare'
-            className='flex items-center gap-x-4'
-          >
-            <ArrowLeftIcon className='w-6 h-6' />
-            <Heading type='section'>Procese</Heading>
-          </Link>
-          <Link href='/'>
-            <Logo />
-          </Link>
-        </div>
-        <Link href='/contact' className='flex items-center gap-x-4'>
-          <FlagIcon className='w-6 h-6' />
-          <Text type='primary-bold'>Raportează o problemă</Text>
-        </Link>
+    <main className='h-screen bg-white grid grid-cols-3'>
+      <div className='col-span-1 flex'>
+        <Side process={process} />
       </div>
-      {children}
+      <div className='col-span-2 flex'>{children}</div>
     </main>
   );
 }

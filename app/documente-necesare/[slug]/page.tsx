@@ -1,4 +1,4 @@
-import { Section } from '@/components';
+import { Steps } from '@/components';
 import { getProcess } from '@/utils/db';
 
 export default async function DocumenteNecesareSlugPage({
@@ -9,8 +9,8 @@ export default async function DocumenteNecesareSlugPage({
   const process = await getProcess(params.slug);
 
   return (
-    <Section title={process.title} text={process.description}>
-      text
-    </Section>
+    <div className='px-24 py-12 w-full'>
+      <Steps steps={process.steps} />
+    </div>
   );
 }

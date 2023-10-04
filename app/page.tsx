@@ -9,7 +9,7 @@ export default function LandingPage() {
       <div className='flex justify-center items-center py-24'>
         <div className='flex flex-col justify-center items-center gap-y-6'>
           <div className='text-aquamarine bg-aquamarine/10 rounded-2xl inline-flex font-semibold text-sm px-3 py-1.5'>
-            Toate procesele sunt actualizate săptămânal!
+            Toate procesele sunt verificate săptămânal!
           </div>
           <div className='w-2/3 mx-auto text-center flex flex-col items-center gap-y-10'>
             <Heading type='landing-title'>
