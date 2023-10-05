@@ -48,7 +48,10 @@ export const Process: FC<ProcessProps> = ({
         <div className='flex items-center justify-between p-4 rounded-md ring-1 ring-inset ring-layout-border'>
           <div className='flex flex-col gap-y-1'>
             <Text type='tertiary'>Ultima actualizare</Text>
-            <Text type='primary-bold'>
+            <Text
+              type='primary-bold'
+              className='2xl:!text-sm xl:!text-sm text-xs'
+            >
               {DateTime.fromISO(updatedAt)
                 .setLocale('ro')
                 .toFormat('dd MMMM, yyyy')}
