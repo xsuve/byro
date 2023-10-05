@@ -11,6 +11,7 @@ type ProcessProps = {
   title: string;
   description: string;
   updatedAt: string;
+  documentsCount: number;
   className?: string;
 };
 
@@ -25,6 +26,7 @@ export const Process: FC<ProcessProps> = ({
   title,
   description,
   updatedAt,
+  documentsCount,
 }) => {
   return (
     <Link href={`/documente-necesare/${slug}`}>
@@ -36,7 +38,8 @@ export const Process: FC<ProcessProps> = ({
         )}
       >
         {cloneElement(ProcessIconMap[icon], {
-          className: '2xl:w-9 w-7 2xl:h-9 h-7 text-vermilion stroke-[1.25]',
+          className:
+            '2xl:w-9 xl:w-9 w-7 2xl:h-9 xl:h-9 h-7 text-vermilion stroke-[1.25]',
         })}
         <div className='flex flex-col gap-y-2'>
           <Heading type='section'>{title}</Heading>
@@ -51,7 +54,13 @@ export const Process: FC<ProcessProps> = ({
                 .toFormat('dd MMMM, yyyy')}
             </Text>
           </div>
-          <Lozenge color='aquamarine'>3 documente</Lozenge>
+          <Lozenge color='aquamarine'>{`${documentsCount} ${
+            documentsCount > 0
+              ? documentsCount > 1
+                ? 'documente'
+                : 'document'
+              : 'documente'
+          }`}</Lozenge>
         </div>
       </div>
     </Link>

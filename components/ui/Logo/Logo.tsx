@@ -45,7 +45,10 @@ export const Logo: FC<LogoProps> = ({
         y='0px'
         viewBox='0 0 117.1 114.3'
         xmlSpace='preserve'
-        className={clsx('2xl:w-8 w-7 2xl:h-8 h-7', LogoColorMap[color].icon)}
+        className={clsx(
+          '2xl:w-8 xl:w-8 w-7 2xl:h-8 xl:h-8 h-7',
+          LogoColorMap[color].icon
+        )}
       >
         <path
           d='M108,66.6l0.1-0.2c10.5-10.7,10.5-27.9-0.1-38.5c-7.4-7.4-18.1-9.7-27.5-6.8c-0.1-5.1-2.1-10.2-6-14
@@ -63,7 +66,7 @@ export const Logo: FC<LogoProps> = ({
       {type !== 'icon' ? (
         <span
           className={clsx(
-            'font-josefin-sans font-bold 2xl:text-2xl text-xl',
+            'font-josefin-sans font-bold 2xl:text-2xl xl:text-2xl text-xl',
             LogoColorMap[color].text
           )}
         >

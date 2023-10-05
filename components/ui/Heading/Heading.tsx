@@ -11,15 +11,16 @@ type HeadingProps = {
 const HeadingTypeMap = {
   'landing-title': {
     tag: 'h1',
-    className: 'font-baskervville 2xl:text-7xl text-5xl leading-tight',
+    className:
+      'font-baskervville 2xl:text-7xl xl:text-7xl text-5xl leading-tight',
   },
   'page-title': {
     tag: 'h2',
-    className: '2xl:text-2xl text-xl font-semibold tracking-tight',
+    className: '2xl:text-2xl xl:text-2xl text-xl font-semibold tracking-tight',
   },
   section: {
     tag: 'h3',
-    className: '2xl:text-base text-sm font-semibold',
+    className: '2xl:text-base xl:text-base text-sm font-semibold',
   },
   label: {
     tag: 'h6',

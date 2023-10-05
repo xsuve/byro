@@ -26,7 +26,7 @@ type LinkTextProps = {
 type TextProps = BaseTextProps & (ParagraphTextProps | LinkTextProps);
 
 const TextTypeMap = {
-  'landing-text': '2xl:text-lg text-base text-primary',
+  'landing-text': '2xl:text-lg xl:text-lg text-base text-primary',
   primary: '',
   'primary-bold': 'font-medium',
   secondary: 'text-secondary',

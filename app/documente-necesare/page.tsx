@@ -23,6 +23,11 @@ export default function DocumenteNecesarePage() {
               title={process.title}
               description={process.description}
               updatedAt={process.updatedAt}
+              documentsCount={process.steps.reduce(
+                (count, step) =>
+                  count + (step.documents ? step.documents.length : 0),
+                0
+              )}
             />
           ))}
         </div>

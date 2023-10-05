@@ -89,7 +89,7 @@ export const Steps: FC<StepsProps> = ({ steps }) => {
 
   return (
     <div className='flex justify-center'>
-      <div className='flex flex-col items-center 2xl:gap-y-24 gap-y-12'>
+      <div className='flex flex-col items-center 2xl:gap-y-24 xl:gap-y-24 gap-y-12'>
         <StepsLines steps={steps} currentStep={currentStep} />
         <div className='flex flex-col gap-y-12'>
           <Heading
@@ -113,7 +113,7 @@ export const Steps: FC<StepsProps> = ({ steps }) => {
               {currentStep.id !== steps[0].id && (
                 <button onClick={handleBackClick}>
                   <div className='flex items-center gap-x-4'>
-                    <ArrowLeftIcon className='2xl:w-6 w-5 2xl:h-6 h-5 text-secondary' />
+                    <ArrowLeftIcon className='2xl:w-6 xl:w-6 w-5 2xl:h-6 xl:h-6 h-5 text-secondary' />
                     <Heading type='label'>Înapoi</Heading>
                   </div>
                 </button>

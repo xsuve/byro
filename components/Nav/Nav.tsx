@@ -65,7 +65,9 @@ export const Nav: FC<NavProps> = () => {
 
   return (
     <nav
-      className={clsx('bg-white py-6 2xl:px-24 px-6 grid grid-cols-2 gap-x-12')}
+      className={clsx(
+        'bg-white py-6 2xl:px-48 xl:px-24 px-6 grid grid-cols-2 gap-x-12'
+      )}
     >
       <div className='flex items-center gap-x-24'>
         <div className='flex justify-start items-center'>
@@ -73,7 +75,7 @@ export const Nav: FC<NavProps> = () => {
             <Logo />
           </Link>
         </div>
-        <div className='2xl:flex hidden justify-start items-center gap-x-10'>
+        <div className='2xl:flex xl:flex hidden justify-start items-center gap-x-10'>
           {links.map((link, index) =>
             link.sublinks ? (
               <div className='cursor-pointer relative group' key={index}>
@@ -103,12 +105,12 @@ export const Nav: FC<NavProps> = () => {
         </div>
       </div>
       <div className='flex justify-end items-center'>
-        <div className='2xl:flex hidden justify-end items-center gap-x-10'>
+        <div className='2xl:flex xl:flex hidden justify-end items-center gap-x-10'>
           <Link href='/contact'>
             <Text type='primary-bold'>Contact</Text>
           </Link>
         </div>
-        <div className='2xl:hidden flex justify-end items-center'>
+        <div className='2xl:hidden xl:hidden flex justify-end items-center'>
           <Bars3Icon
             className='w-6 h-6 text-secondary cursor-pointer'
             onClick={() => setMenuToggled(!menuToggled)}
@@ -117,7 +119,9 @@ export const Nav: FC<NavProps> = () => {
       </div>
       <div
         className={clsx(
-          menuToggled ? 'flex flex-col gap-y-2 col-span-2' : 'hidden',
+          menuToggled
+            ? '2xl:hidden xl:hidden flex flex-col gap-y-2 col-span-2'
+            : 'hidden',
           'py-6'
         )}
       >
