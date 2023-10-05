@@ -11,7 +11,7 @@ type SideProps = {
 export const Side: FC<SideProps> = ({ process }) => {
   return (
     <div className='sticky top-0 left-0 2xl:h-screen w-full 2xl:px-24 px-6 2xl:py-12 py-6 flex 2xl:flex-col justify-between bg-layout-background'>
-      <div className='flex 2xl:flex-col 2xl:gap-y-24 2xl:gap-x-0 gap-x-6 items-center'>
+      <div className='flex 2xl:flex-col 2xl:gap-y-24 2xl:gap-x-0 gap-x-6 2xl:items-start items-center'>
         <div>
           <Link
             href='/documente-necesare'
