@@ -8,7 +8,7 @@ export const GoogleAnalytics: FC = () => {
         strategy='lazyOnload'
         src='https://www.googletagmanager.com/gtag/js?id=G-V89DLBT3YM'
       ></Script>
-      <Script strategy='lazyOnload'>
+      <Script strategy='lazyOnload' id='google-analytics-tag'>
         {`
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
