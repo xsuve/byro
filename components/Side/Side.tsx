@@ -1,4 +1,8 @@
-import { ArrowLeftIcon, FlagIcon } from '@heroicons/react/24/outline';
+import {
+  ArrowLeftIcon,
+  ArrowTopRightOnSquareIcon,
+  FlagIcon,
+} from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { FC } from 'react';
 import { Heading, Logo, Text } from '../ui';
@@ -15,8 +19,7 @@ export const Side: FC<SideProps> = ({ process }) => {
         <div>
           <Link
             href='/documente-necesare'
-            className='flex items-center gap-x-4'
-          >
+            className='flex items-center gap-x-4'>
             <ArrowLeftIcon className='2xl:w-6 xl:w-6 w-5 2xl:h-6 xl:h-6 h-5 text-secondary' />
             <Heading type='label' className='2xl:block xl:block hidden'>
               Procese
@@ -27,25 +30,40 @@ export const Side: FC<SideProps> = ({ process }) => {
           <Link href='/' className='2xl:block xl:block hidden'>
             <Logo />
           </Link>
-          <div className='flex flex-col gap-y-4'>
-            <Heading type='section'>
-              Documente necesare {process.title.toLowerCase()}
-            </Heading>
-            <Text type='tertiary' className='2xl:block xl:block hidden'>
-              {process.description}
-            </Text>
+          <div className='flex flex-col gap-y-12'>
+            <div className='flex flex-col gap-y-4'>
+              <Heading type='section'>
+                Documente necesare {process.title.toLowerCase()}
+              </Heading>
+              <Text type='tertiary' className='2xl:block xl:block hidden'>
+                {process.description}
+              </Text>
+            </div>
+            <div className='2xl:flex xl:flex hidden items-center gap-x-2'>
+              <ArrowTopRightOnSquareIcon className='w-5 h-5 text-aquamarine' />
+              <Text type='link' target='_blank' href={process.official.link}>
+                {process.official.title}
+              </Text>
+            </div>
           </div>
         </div>
       </div>
-      <Link
-        href='/contact'
-        className='flex items-center gap-x-4 2xl:pl-0 xl:pl-0 pl-6'
-      >
-        <FlagIcon className='2xl:w-6 xl:w-6 w-5 2xl:h-6 xl:h-6 h-5' />
-        <Text type='primary-bold' className='2xl:block xl:block hidden'>
-          Raportează o problemă
-        </Text>
-      </Link>
+      <div className='flex items-center gap-x-4 2xl:pl-0 xl:pl-0 pl-4'>
+        <Link
+          href={process.official.link}
+          target='_blank'
+          className='2xl:hidden xl:hidden block'>
+          <ArrowTopRightOnSquareIcon className='w-4 h-4' />
+        </Link>
+        <Link
+          href='/contact'
+          className='flex items-center gap-x-4 2xl:pl-0 xl:pl-0'>
+          <FlagIcon className='2xl:w-6 xl:w-6 w-4 2xl:h-6 xl:h-6 h-4' />
+          <Text type='primary-bold' className='2xl:block xl:block hidden'>
+            Raportează o problemă
+          </Text>
+        </Link>
+      </div>
     </div>
   );
 };

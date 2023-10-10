@@ -11,6 +11,11 @@ type ProcessStepOption = {
   next: string | null;
 };
 
+type ProcessOfficial = {
+  title: string;
+  link: string;
+};
+
 export type ProcessStep = {
   id: string;
   title: string;
@@ -23,6 +28,7 @@ export interface Process {
   icon: string;
   title: string;
   description: string;
+  official: ProcessOfficial;
   updatedAt: string;
   createdAt: string;
   steps: ProcessStep[];

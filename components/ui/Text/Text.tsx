@@ -31,7 +31,7 @@ const TextTypeMap = {
   'primary-bold': 'font-medium',
   secondary: 'text-secondary',
   tertiary: 'text-xs text-secondary',
-  link: '',
+  link: 'text-xs text-aquamarine',
 };
 
 export const Text: FC<TextProps> = ({
@@ -47,11 +47,8 @@ export const Text: FC<TextProps> = ({
         <a
           href={href}
           target={target}
-          className={clsx('inline-block cursor-pointer', className)}
-        >
-          <p className='font-medium text-accent-primary hover:text-primary'>
-            {children}
-          </p>
+          className={clsx('inline-block cursor-pointer', className)}>
+          <p className={clsx('font-medium', TextTypeMap[type])}>{children}</p>
         </a>
       ) : (
         <p className={clsx(TextTypeMap[type], className)}>{children}</p>
