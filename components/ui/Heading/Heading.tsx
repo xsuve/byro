@@ -5,6 +5,7 @@ type HeadingType = 'landing-title' | 'page-title' | 'section' | 'label';
 type HeadingProps = {
   type: HeadingType;
   children: ReactNode;
+  tag?: string;
   className?: string;
 };
 
@@ -28,8 +29,14 @@ const HeadingTypeMap = {
   },
 };
 
-export const Heading: FC<HeadingProps> = ({ type, children, className }) => {
-  const HeadingTag = HeadingTypeMap[type].tag as keyof JSX.IntrinsicElements;
+export const Heading: FC<HeadingProps> = ({
+  type,
+  children,
+  tag,
+  className,
+}) => {
+  const HeadingTag = (tag ||
+    HeadingTypeMap[type].tag) as keyof JSX.IntrinsicElements;
 
   return (
     <HeadingTag className={clsx(HeadingTypeMap[type].className, className)}>

@@ -11,8 +11,10 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'Byro - Documente necesare proceselor birocratice',
-  description: 'Documente necesare proceselor birocratice',
+  title: 'Byro - Documente și acte necesare proceselor birocratice în România',
+  description:
+    'Verifică documentele necesare pentru orice proces în România, de la înmatriculare autovehicul sau schimbare buletin și pana la eliberare pașaport.',
+  keywords: 'documente necesare, acte necesare',
 };
 
 export default function RootLayout({
@@ -24,8 +26,7 @@ export default function RootLayout({
     <html lang='en'>
       <GoogleAnalytics />
       <body
-        className={clsx(poppins.className, 'antialiased text-sm text-primary')}
-      >
+        className={clsx(poppins.className, 'antialiased text-sm text-primary')}>
         {children}
       </body>
     </html>

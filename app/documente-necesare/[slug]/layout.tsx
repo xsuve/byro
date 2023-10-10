@@ -11,7 +11,8 @@ export async function generateMetadata({
 
   return {
     title: `Byro - Documente necesare ${process.title.toLowerCase()}`,
-    description: `Documente necesare pentru ${process.title.toLowerCase()}`,
+    description: `Documente și acte necesare pentru ${process.title.toLowerCase()}. Ce trebuie să conțină dosarul de ${process.title.toLowerCase()}. Verifică documentele necesare pe Byro.`,
+    keywords: process.keywords,
   };
 }
 
@@ -25,11 +26,11 @@ export default async function DocumenteNecesareSlugLayout({
   const process = await getProcess(params.slug);
 
   return (
-    <main className='2xl:h-screen xl:h-screen bg-white grid 2xl:grid-cols-3 xl:grid-cols-3 grid-cols-1'>
+    <article className='2xl:h-screen xl:h-screen bg-white grid 2xl:grid-cols-3 xl:grid-cols-3 grid-cols-1'>
       <div className='col-span-1 flex'>
         <Side process={process} />
       </div>
       <div className='col-span-2 flex'>{children}</div>
-    </main>
+    </article>
   );
 }

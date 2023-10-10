@@ -28,6 +28,7 @@ export interface Process {
   icon: string;
   title: string;
   description: string;
+  keywords: string[];
   official: ProcessOfficial;
   updatedAt: string;
   createdAt: string;

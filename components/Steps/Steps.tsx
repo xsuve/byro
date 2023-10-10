@@ -42,7 +42,7 @@ export const Steps: FC<StepsProps> = ({ steps }) => {
         }
       }
     }
-  }, [params]);
+  }, [params, steps]);
 
   const handleOptionClick = (nextStepId: string | null, optionId: string) => {
     const nextStep = steps.find((step) => step.id === nextStepId);
@@ -94,10 +94,10 @@ export const Steps: FC<StepsProps> = ({ steps }) => {
         <div className='flex flex-col gap-y-12'>
           <Heading
             type='page-title'
+            tag='h2'
             className={clsx(
               currentStep.documents ? 'text-left' : 'text-center'
-            )}
-          >
+            )}>
             {currentStep.title}
           </Heading>
           <div className='flex flex-col items-center gap-y-12'>

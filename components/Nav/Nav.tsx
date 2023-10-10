@@ -64,11 +64,10 @@ export const Nav: FC<NavProps> = () => {
   const [menuToggled, setMenuToggled] = useState(false);
 
   return (
-    <nav
+    <header
       className={clsx(
         'bg-white py-6 2xl:px-48 xl:px-24 px-6 grid grid-cols-2 gap-x-12'
-      )}
-    >
+      )}>
       <div className='flex items-center gap-x-24'>
         <div className='flex justify-start items-center'>
           <Link href='/'>
@@ -123,8 +122,7 @@ export const Nav: FC<NavProps> = () => {
             ? '2xl:hidden xl:hidden flex flex-col gap-y-2 col-span-2'
             : 'hidden',
           'py-6'
-        )}
-      >
+        )}>
         {links.map((link, index) =>
           link.sublinks ? (
             <div key={index} className='flex flex-col gap-y-4 order-1 mt-2'>
@@ -149,6 +147,6 @@ export const Nav: FC<NavProps> = () => {
           )
         )}
       </div>
-    </nav>
+    </header>
   );
 };

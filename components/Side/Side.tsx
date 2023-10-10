@@ -14,7 +14,7 @@ type SideProps = {
 
 export const Side: FC<SideProps> = ({ process }) => {
   return (
-    <div className='sticky top-0 left-0 2xl:h-screen xl:h-screen w-full 2xl:px-24 xl:px-12 px-6 2xl:py-12 xl:py-12 py-6 flex 2xl:flex-col xl:flex-col justify-between bg-layout-background'>
+    <nav className='sticky top-0 left-0 2xl:h-screen xl:h-screen w-full 2xl:px-24 xl:px-12 px-6 2xl:py-12 xl:py-12 py-6 flex 2xl:flex-col xl:flex-col justify-between bg-layout-background'>
       <div className='flex 2xl:flex-col xl:flex-col 2xl:gap-y-24 xl:gap-y-24 2xl:gap-x-0 xl:gap-x-0 gap-x-6 2xl:items-start xl:items-start items-center'>
         <div>
           <Link
@@ -32,7 +32,7 @@ export const Side: FC<SideProps> = ({ process }) => {
           </Link>
           <div className='flex flex-col gap-y-12'>
             <div className='flex flex-col gap-y-4'>
-              <Heading type='section'>
+              <Heading type='section' tag='h1'>
                 Documente necesare {process.title.toLowerCase()}
               </Heading>
               <Text type='tertiary' className='2xl:block xl:block hidden'>
@@ -64,6 +64,6 @@ export const Side: FC<SideProps> = ({ process }) => {
           </Text>
         </Link>
       </div>
-    </div>
+    </nav>
   );
 };
