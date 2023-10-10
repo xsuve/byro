@@ -16,8 +16,9 @@ export default function LandingPage() {
               Documente necesare proceselor birocratice.
             </Heading>
             <Text type='landing-text'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor consectetur.
+              Verifică documentele necesare pentru orice proces în România, de
+              la înmatriculare autovehicul sau schimbare buletin și pana la
+              eliberare pașaport.
             </Text>
             <Link href='/documente-necesare'>
               <Button>Încearcă acum</Button>
@@ -33,13 +34,12 @@ export default function LandingPage() {
             </div>
             <Heading
               type='landing-title'
-              className='2xl:!text-4xl xl:!text-4xl !text-3xl !leading-tight'
-            >
+              className='2xl:!text-4xl xl:!text-4xl !text-3xl !leading-tight'>
               Verifică documentele necesare pentru nevoile tale
             </Heading>
             <Text type='landing-text'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor.
+              Tot ce trebuie să conțină dosarul tău pentru procesul birocratic
+              pe care îl desfășori.
             </Text>
           </div>
           <Link href='/documente-necesare'>
@@ -53,13 +53,12 @@ export default function LandingPage() {
             </div>
             <Heading
               type='landing-title'
-              className='2xl:!text-4xl xl:!text-4xl !text-3xl !leading-tight'
-            >
+              className='2xl:!text-4xl xl:!text-4xl !text-3xl !leading-tight'>
               Descarcă modelele uzuale de documente
             </Heading>
             <Text type='landing-text'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor.
+              Modele și documente disponibile pentru descărcare și pentru a le
+              folosi în procese.
             </Text>
           </div>
           <Link href='/modele-documente'>
