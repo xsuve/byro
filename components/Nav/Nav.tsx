@@ -66,7 +66,7 @@ export const Nav: FC<NavProps> = () => {
   return (
     <header
       className={clsx(
-        'bg-white py-6 2xl:px-48 xl:px-24 px-6 grid grid-cols-2 gap-x-12'
+        'bg-white py-6 2xl:px-24 xl:px-24 px-6 grid grid-cols-2 gap-x-12'
       )}>
       <div className='flex items-center gap-x-24'>
         <div className='flex justify-start items-center'>

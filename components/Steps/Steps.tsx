@@ -90,7 +90,7 @@ export const Steps: FC<StepsProps> = ({ steps }) => {
   return (
     <div className='flex justify-center'>
       <div className='flex flex-col items-center 2xl:gap-y-24 xl:gap-y-24 gap-y-12'>
-        <StepsLines steps={steps} currentStep={currentStep} />
+        {/* <StepsLines steps={steps} currentStep={currentStep} /> */}
         <div className='flex flex-col gap-y-12'>
           <Heading
             type='page-title'

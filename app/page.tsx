@@ -26,7 +26,7 @@ export default function LandingPage() {
           </div>
         </div>
       </div>
-      <div className='grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 gap-x-12 2xl:gap-y-0 gap-y-6 2xl:px-48 px-6 2xl:pb-24 pb-12 2xl:pt-12 pt-6'>
+      <div className='grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 gap-x-12 2xl:gap-y-0 gap-y-6 2xl:px-24 xl:px-24 px-6 2xl:pb-24 pb-12 2xl:pt-12 pt-6'>
         <div className='rounded-2xl 2xl:p-12 xl:p-12 p-8 bg-creamy flex flex-col justify-between gap-y-10'>
           <div className='flex flex-col items-start gap-y-6'>
             <div className='text-primary bg-vermilion/30 rounded-full inline-flex font-semibold 2xl:text-sm xl:text-sm text-xs px-4 py-2'>

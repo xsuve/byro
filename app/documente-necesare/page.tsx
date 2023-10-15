@@ -18,7 +18,7 @@ export default function DocumenteNecesarePage() {
         <Heading type='page-title' tag='h1'>
           Documente necesare
         </Heading>
-        <div className='grid 2xl:grid-cols-4 xl:grid-cols-3 grid-cols-1 gap-6'>
+        <div className='grid 2xl:grid-cols-3 xl:grid-cols-3 grid-cols-1 gap-6'>
           {db.processes.map((process, index) => (
             <Process
               key={index}
