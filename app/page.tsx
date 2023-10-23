@@ -61,8 +61,8 @@ export default function LandingPage() {
               folosi în procese.
             </Text>
           </div>
-          <Link href='/modele-documente'>
-            <Button>Descarcă modele</Button>
+          <Link href='#'>
+            <Button>În curând!</Button>
           </Link>
         </div>
       </div>
