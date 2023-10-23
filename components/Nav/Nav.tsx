@@ -18,10 +18,6 @@ type NavProps = {};
 
 const links: NavLinkProps[] = [
   {
-    href: '/despre',
-    title: 'Despre',
-  },
-  {
     href: '#',
     title: 'Produse',
     sublinks: [
@@ -47,7 +43,7 @@ const links: NavLinkProps[] = [
         disabled: true,
       },
       {
-        href: '/contribuie',
+        href: '/contact',
         title: 'Propune soluție',
         text: 'Vino cu o idee de funcționalitate pentru nevoile tale',
         disabled: false,
