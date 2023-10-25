@@ -2,6 +2,7 @@ import { Nav, Process, Section } from '@/components';
 import db from '../../public/db.json';
 import { Metadata } from 'next';
 import { Heading } from '@/components/ui';
+import { getMaxSteps } from '@/utils/helpers';
 
 export const metadata: Metadata = {
   title: 'Byro - Documente și acte necesare proceselor birocratice în România',
@@ -27,11 +28,7 @@ export default function DocumenteNecesarePage() {
               title={process.title}
               description={process.description}
               updatedAt={process.updatedAt}
-              documentsCount={process.steps.reduce(
-                (count, step) =>
-                  count + (step.documents ? step.documents.length : 0),
-                0
-              )}
+              maxSteps={getMaxSteps(process.steps)}
             />
           ))}
         </div>
