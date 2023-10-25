@@ -11,7 +11,7 @@ type ProcessProps = {
   title: string;
   description: string;
   updatedAt: string;
-  documentsCount: number;
+  maxSteps: number;
   className?: string;
 };
 
@@ -26,7 +26,7 @@ export const Process: FC<ProcessProps> = ({
   title,
   description,
   updatedAt,
-  documentsCount,
+  maxSteps,
 }) => {
   return (
     <Link href={`/documente-necesare/${slug}`}>
@@ -55,13 +55,12 @@ export const Process: FC<ProcessProps> = ({
                 .toFormat('dd MMMM, yyyy')}
             </Text>
           </div>
-          <Lozenge color='aquamarine'>{`${documentsCount} ${
-            documentsCount > 0
-              ? documentsCount > 1
-                ? 'documente'
-                : 'document'
-              : 'documente'
-          }`}</Lozenge>
+          <Lozenge color='aquamarine'>
+            max.{' '}
+            {`${maxSteps} ${
+              maxSteps > 0 ? (maxSteps > 1 ? 'pași' : 'pas') : 'pași'
+            }`}
+          </Lozenge>
         </div>
       </div>
     </Link>
