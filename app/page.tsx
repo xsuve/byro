@@ -1,12 +1,13 @@
 import { Nav } from '@/components';
 import { Button, Heading, Text } from '@/components/ui';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function LandingPage() {
   return (
     <main>
       <Nav />
-      <div className='flex justify-center items-center 2xl:py-24 xl:py-24 py-12'>
+      <div className='flex justify-center items-center 2xl:pt-24 xl:pt-24 pt-12 2xl:pb-12 xl:pb-12 pb-12'>
         <div className='flex flex-col justify-center items-center gap-y-6'>
           <div className='text-aquamarine bg-aquamarine/10 rounded-2xl inline-flex font-semibold 2xl:text-sm xl:text-sm text-xs px-3 py-1.5'>
             Toate procesele sunt verificate săptămânal!
@@ -26,8 +27,8 @@ export default function LandingPage() {
           </div>
         </div>
       </div>
-      <div className='grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 gap-x-12 2xl:gap-y-0 gap-y-6 2xl:px-24 xl:px-24 px-6 2xl:pb-24 pb-12 2xl:pt-12 pt-6'>
-        <div className='rounded-2xl 2xl:p-12 xl:p-12 p-8 bg-creamy flex flex-col justify-between gap-y-10'>
+      <div className='grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 gap-x-12 2xl:gap-y-0 gap-y-6 2xl:px-24 xl:px-24 px-6 2xl:py-12 xl:py-12 py-6'>
+        <div className='rounded-2xl 2xl:p-12 xl:p-12 p-8 bg-creamy flex flex-col items-start justify-between gap-y-10'>
           <div className='flex flex-col items-start gap-y-6'>
             <div className='text-primary bg-vermilion/30 rounded-full inline-flex font-semibold 2xl:text-sm xl:text-sm text-xs px-4 py-2'>
               Documente necesare
@@ -46,7 +47,7 @@ export default function LandingPage() {
             <Button>Verifică documente</Button>
           </Link>
         </div>
-        <div className='rounded-2xl 2xl:p-12 xl:p-12 p-8 bg-creamy flex flex-col justify-between gap-y-10'>
+        <div className='rounded-2xl 2xl:p-12 xl:p-12 p-8 bg-creamy flex flex-col items-start justify-between gap-y-10'>
           <div className='flex flex-col items-start gap-y-6'>
             <div className='text-primary bg-aquamarine/30 rounded-full inline-flex font-semibold 2xl:text-sm xl:text-sm text-xs px-4 py-2'>
               Modele documente
@@ -64,6 +65,36 @@ export default function LandingPage() {
           <Link href='#'>
             <Button>În curând!</Button>
           </Link>
+        </div>
+      </div>
+      <div className='grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 gap-x-12 2xl:text-left xl:text-left text-center 2xl:gap-y-0 gap-y-6 2xl:px-48 xl:px-48 px-6 2xl:py-12 xl:py-12 py-6'>
+        <div>
+          <Heading type='landing-title'>Mereu cu dosarul complet.</Heading>
+        </div>
+        <div className='flex flex-col 2xl:items-start xl:items-start items-center 2xl:gap-y-12 xl:gap-y-12 gap-y-6'>
+          <Text type='landing-text'>
+            Nu te mai întoarce din drum pentru că ai uitat un document la
+            dosarul tău.
+          </Text>
+          <Text type='landing-text'>
+            cu Byro, procesele sunt verificate săptămânal și astfel poți fi
+            sigur de integritatea dosarului.
+          </Text>
+          <Link href='/documente-necesare'>
+            <Button type='button' color='secondary'>
+              Verifică documente
+            </Button>
+          </Link>
+        </div>
+      </div>
+      <div className='2xl:px-48 xl:px-48 px-6 2xl:py-12 xl:py-12 py-6'>
+        <div className='w-full 2xl:h-[350px] xl:h-[350px] h-[250px] rounded-2xl relative overflow-hidden'>
+          <Image
+            src='/img/byro-header.jpg'
+            alt='Byro - Documente si acte necesare proceselor birocratice'
+            fill
+            style={{ objectFit: 'cover', objectPosition: '50% 60%' }}
+          />
         </div>
       </div>
     </main>
