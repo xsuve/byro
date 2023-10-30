@@ -1,6 +1,16 @@
-import { Process } from '@/types';
+import { Process, Document } from '@/types';
 
 import db from '../public/db.json';
+
+export async function getProcesses(): Promise<Process[]> {
+  const processes = db.processes;
+
+  if (!processes) {
+    throw new Error('Failed to find processes.');
+  }
+
+  return processes;
+}
 
 export async function getProcess(slug: string): Promise<Process> {
   const process = db.processes.find(
@@ -12,4 +22,14 @@ export async function getProcess(slug: string): Promise<Process> {
   }
 
   return process;
+}
+
+export async function getDocuments(): Promise<Document[]> {
+  const processes = db.documents;
+
+  if (!processes) {
+    throw new Error('Failed to find processes.');
+  }
+
+  return processes;
 }
