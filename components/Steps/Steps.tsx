@@ -2,18 +2,18 @@
 
 import { FC, useState, useEffect } from 'react';
 import { Heading } from '../ui';
-import { ProcessStep } from '@/types';
+import { Document, ProcessStep } from '@/types';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { StepsLines } from './StepsLines';
 import { StepsOptions } from './StepsOptions';
 import { ArrowLeftIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
 
 type StepsProps = {
   steps: ProcessStep[];
+  documents: Document[];
 };
 
-export const Steps: FC<StepsProps> = ({ steps }) => {
+export const Steps: FC<StepsProps> = ({ steps, documents }) => {
   const params = useSearchParams();
   const router = useRouter();
   const [selectedOptions, setSelectedOptions] = useState<{
@@ -87,6 +87,11 @@ export const Steps: FC<StepsProps> = ({ steps }) => {
   const currentStep =
     steps.find((step) => step.id === currentStepId) || steps[0];
 
+  const currentStepDocuments = documents.filter(
+    (document) =>
+      currentStep.documents && currentStep.documents.includes(document.id)
+  );
+
   return (
     <div className='flex justify-center'>
       <div className='flex flex-col items-center 2xl:gap-y-24 xl:gap-y-24 gap-y-12'>
@@ -112,6 +117,7 @@ export const Steps: FC<StepsProps> = ({ steps }) => {
             <div className='flex justify-end items-center gap-x-4'>
               <StepsOptions
                 currentStep={currentStep}
+                currentStepDocuments={currentStepDocuments}
                 onOptionClick={(optionNext, optionId) =>
                   handleOptionClick(optionNext, optionId)
                 }

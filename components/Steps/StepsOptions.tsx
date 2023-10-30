@@ -1,4 +1,4 @@
-import { ProcessStep } from '@/types';
+import { Document, ProcessStep } from '@/types';
 import { FC } from 'react';
 import { Text } from '../ui';
 import { StepsOption } from './StepsOption';
@@ -7,11 +7,13 @@ import Link from 'next/link';
 
 type StepsOptionsProps = {
   currentStep: ProcessStep;
+  currentStepDocuments: Document[] | null;
   onOptionClick: (optionNext: string | null, optionId: string) => void;
 };
 
 export const StepsOptions: FC<StepsOptionsProps> = ({
   currentStep,
+  currentStepDocuments,
   onOptionClick,
 }) => {
   return (
@@ -24,9 +26,9 @@ export const StepsOptions: FC<StepsOptionsProps> = ({
               onOptionClick={onOptionClick}
             />
           ))
-        : currentStep.documents && (
+        : currentStepDocuments && (
             <ul className='space-y-8 pl-4'>
-              {currentStep.documents.map((document, index) => (
+              {currentStepDocuments.map((document, index) => (
                 <li key={index} className='list-decimal leading-loose pl-2'>
                   <Text type='primary-bold'>{document.title}</Text>
                   {document.description &&
@@ -38,8 +40,7 @@ export const StepsOptions: FC<StepsOptionsProps> = ({
                   {document.download && (
                     <Link
                       href={document.download}
-                      className='flex justify-start items-center gap-x-2 w-fit mt-2'
-                    >
+                      className='flex justify-start items-center gap-x-2 w-fit mt-2'>
                       <ArrowDownTrayIcon className='w-4 h-4 text-vermilion' />
                       <Text type='tertiary' className='text-vermilion'>
                         Descarcă

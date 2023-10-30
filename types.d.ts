@@ -1,10 +1,3 @@
-type ProcessStepDocument = {
-  id: string;
-  title: string;
-  description: string[] | null;
-  download: string | null;
-};
-
 type ProcessStepOption = {
   id: string;
   label: string;
@@ -20,7 +13,7 @@ export type ProcessStep = {
   id: string;
   title: string;
   options: ProcessStepOption[] | null;
-  documents: ProcessStepDocument[] | null;
+  documents: string[] | null;
 };
 
 export interface Process {
@@ -33,4 +26,11 @@ export interface Process {
   updatedAt: string;
   createdAt: string;
   steps: ProcessStep[];
+}
+
+export interface Document {
+  id: string;
+  title: string;
+  description: string[] | null;
+  download: string | null;
 }
