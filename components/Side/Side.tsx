@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { FC } from 'react';
 import { Heading, Logo, Text } from '../ui';
 import { Process } from '@/types';
+import { DateTime } from 'luxon';
 
 type SideProps = {
   process: Process;
@@ -37,6 +38,16 @@ export const Side: FC<SideProps> = ({ process }) => {
               </Heading>
               <Text type='tertiary' className='2xl:block xl:block hidden'>
                 {process.description}
+              </Text>
+            </div>
+            <div className='2xl:flex xl:flex hidden flex-col gap-y-1'>
+              <Text type='tertiary'>Ultima verificare</Text>
+              <Text
+                type='primary-bold'
+                className='2xl:!text-sm xl:!text-sm text-xs'>
+                {DateTime.fromISO(process.updatedAt)
+                  .setLocale('ro')
+                  .toFormat('dd MMMM, yyyy')}
               </Text>
             </div>
             <div className='2xl:flex xl:flex hidden items-center gap-x-2'>
