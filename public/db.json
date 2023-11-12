@@ -2,7 +2,7 @@
   "processes": [
     {
       "slug": "inmatriculare-autovehicul",
-      "category": "auto",
+      "category": "autovehicul",
       "icon": "truck",
       "title": "Înmatriculare autovehicul",
       "description": "Documente necesare pentru înmatricularea autovehicului nou sau second-hand în Romania.",
@@ -12,7 +12,7 @@
         "link": "https://dgpci.mai.gov.ro/documents-and-forms/inmatriculari"
       },
       "createdAt": "2023-09-26T19:46:19.454+03:00",
-      "updatedAt": "2023-10-25T19:46:19.454+03:00",
+      "updatedAt": "2023-11-12T00:00:00.000+03:00",
       "steps": [
         {
           "id": "tip",
@@ -117,7 +117,7 @@
             "drept-de-proprietate",
             "formular-certificat-anaf",
             "carte-identitate-vehicul",
-            "placute-numar-inmatriculare",
+            "placute-numar-inmatriculare-solicitant",
             "dovada-plata-placute"
           ]
         },
@@ -135,7 +135,69 @@
             "drept-de-proprietate",
             "dovada-efectuare-formalitati-vamale",
             "carte-identitate-vehicul",
-            "placute-numar-inmatriculare",
+            "placute-numar-inmatriculare-solicitant",
+            "dovada-plata-placute"
+          ]
+        },
+        {
+          "id": "second-hand-in-romania",
+          "title": "Documente necesare înmatriculare autovehicul second-hand în România",
+          "options": null,
+          "documents": [
+            "cerere-solicitant",
+            "dovada-inregistrare",
+            "dovada-plata-certificat-inmatriculare",
+            "act-identitate",
+            "procura-speciala-notar",
+            "copie-contract-asigurare-raspundere-civila-auto",
+            "drept-de-proprietate",
+            "carte-identitate-vehicul",
+            "dovada-efectuare-inspectie-tehnica",
+            "certificat-de-inmatriculare-fost-proprietar",
+            "placute-numar-inmatriculare-fost-proprietar",
+            "placute-numar-inmatriculare-solicitant",
+            "dovada-plata-placute"
+          ]
+        },
+        {
+          "id": "second-hand-in-ue",
+          "title": "Documente necesare înmatriculare autovehicul second-hand în UE",
+          "options": null,
+          "documents": [
+            "cerere-solicitant",
+            "dovada-inregistrare",
+            "dovada-plata-certificat-inmatriculare",
+            "act-identitate",
+            "procura-speciala-notar",
+            "copie-contract-asigurare-raspundere-civila-auto",
+            "drept-de-proprietate",
+            "achizitie-intracomunitara",
+            "carte-identitate-vehicul",
+            "certificat-autenticitate",
+            "documente-inmatriculare-autoritati-straine",
+            "placute-numar-inmatriculare-solicitant",
+            "dovada-efectuare-inspectie-tehnica",
+            "dovada-plata-placute"
+          ]
+        },
+        {
+          "id": "second-hand-in-afara-ue",
+          "title": "Documente necesare înmatriculare autovehicul second-hand în afara UE",
+          "options": null,
+          "documents": [
+            "cerere-solicitant",
+            "dovada-inregistrare",
+            "dovada-plata-certificat-inmatriculare",
+            "act-identitate",
+            "procura-speciala-notar",
+            "copie-contract-asigurare-raspundere-civila-auto",
+            "drept-de-proprietate",
+            "dovada-efectuare-formalitati-vamale",
+            "carte-identitate-vehicul",
+            "certificat-autenticitate",
+            "documente-inmatriculare-autoritati-straine",
+            "placute-numar-inmatriculare-solicitant",
+            "dovada-efectuare-inspectie-tehnica",
             "dovada-plata-placute"
           ]
         }
@@ -265,7 +327,7 @@
       "download": null
     },
     {
-      "id": "placute-numar-inmatriculare",
+      "id": "placute-numar-inmatriculare-solicitant",
       "title": "Plăcuţele cu numărul de înmatriculare a cărui combinație a fost păstrată anterior de către solicitant",
       "description": [
         "În măsura în care acesta intenționează atribuirea combinației păstrate, cu ocazia înmatriculării. Acestea se restituie pe loc solicitantului numai dacă îndeplinesc cerințele impuse de standardele în vigoare, iar combinația numărului de înmatriculare nu a fost restricționată conform legii."
@@ -275,7 +337,9 @@
     {
       "id": "documente-inmatriculare-autoritati-straine",
       "title": "Documentele de înmatriculare eliberate de autoritățile străine în cazul vehiculului care a mai fost înmatriculat în alt stat, în original și în copie",
-      "description": ["În lipsa acestor documente, autorizarea provizorie pentru circulație se va efectua pentru o perioadă de maximum 5 zile, dar care nu poate depăși data la care expiră asigurarea de răspundere civilă auto obligatorie."],
+      "description": [
+        "În lipsa acestor documente, autorizarea provizorie pentru circulație se va efectua pentru o perioadă de maximum 5 zile, dar care nu poate depăși data la care expiră asigurarea de răspundere civilă auto obligatorie."
+      ],
       "download": null
     },
     {
@@ -288,6 +352,20 @@
       "id": "copie-declaratie-vamala",
       "title": "Copia declarației vamale, după caz, pentru vehiculele achiziţionate din afara UE, pentru care se solicită autorizarea de circulaţie provizorie pentru o perioadă mai mare de 30 de zile sau pentru perioade care, cumulate, depăşesc 30 de zile.",
       "description": null,
+      "download": null
+    },
+    {
+      "id": "certificat-de-inmatriculare-fost-proprietar",
+      "title": "Certificatul de înmatriculare emis pe numele fostului proprietar.",
+      "description": null,
+      "download": null
+    },
+    {
+      "id": "placute-numar-inmatriculare-fost-proprietar",
+      "title": "Plăcuţele cu numărul de înmatriculare, inclusiv în situația în care combinația numărului de înmatriculare a fost păstrată de fostul proprietar",
+      "description": [
+        "Acestea se restituie pe loc solicitantului, când se transferă automat noului proprietar, precum și în situația în care fostul proprietar a optat pentru păstrarea combinației numărului de înmatriculare, numai dacă îndeplinesc cerințele impuse de standardele în vigoare, iar combinația numărului de înmatriculare nu a fost restricționată conform legii."
+      ],
       "download": null
     }
   ]
