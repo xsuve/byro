@@ -25,6 +25,10 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <head>
+        <meta
+          name='google-site-verification'
+          content='XVEbn4hMfszAwogzxk5BGgErMPNNwkHWO20cD9Dq5es'
+        />
         <GoogleAnalytics />
       </head>
       <body
