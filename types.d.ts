@@ -18,6 +18,7 @@ export type ProcessStep = {
 
 export interface Process {
   slug: string;
+  category: string;
   icon: string;
   title: string;
   description: string;
