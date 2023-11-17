@@ -18,39 +18,43 @@ export const StepsOptions: FC<StepsOptionsProps> = ({
 }) => {
   return (
     <>
-      {currentStep.options
-        ? currentStep.options.map((option, index) => (
+      {currentStep.options ? (
+        <div className='flex flex-col items-center gap-4'>
+          {currentStep.options.map((option, index) => (
             <StepsOption
               key={index}
               option={option}
               onOptionClick={onOptionClick}
             />
-          ))
-        : currentStepDocuments && (
-            <ul className='space-y-8 pl-4'>
-              {currentStepDocuments.map((document, index) => (
-                <li key={index} className='list-decimal leading-loose pl-2'>
-                  <Text type='primary-bold'>{document.title}</Text>
-                  {document.description &&
-                    document.description.map((description, index) => (
-                      <Text key={index} type='secondary'>
-                        {description}
-                      </Text>
-                    ))}
-                  {document.download && (
-                    <Link
-                      href={document.download}
-                      className='flex justify-start items-center gap-x-2 w-fit mt-2'>
-                      <ArrowDownTrayIcon className='w-4 h-4 text-vermilion' />
-                      <Text type='tertiary' className='text-vermilion'>
-                        Descarcă
-                      </Text>
-                    </Link>
-                  )}
-                </li>
-              ))}
-            </ul>
-          )}
+          ))}
+        </div>
+      ) : (
+        currentStepDocuments && (
+          <ul className='space-y-8 pl-4'>
+            {currentStepDocuments.map((document, index) => (
+              <li key={index} className='list-decimal leading-loose pl-2'>
+                <Text type='primary-bold'>{document.title}</Text>
+                {document.description &&
+                  document.description.map((description, index) => (
+                    <Text key={index} type='secondary'>
+                      {description}
+                    </Text>
+                  ))}
+                {document.download && (
+                  <Link
+                    href={document.download}
+                    className='flex justify-start items-center gap-x-2 w-fit mt-2'>
+                    <ArrowDownTrayIcon className='w-4 h-4 text-vermilion' />
+                    <Text type='tertiary' className='text-vermilion'>
+                      Descarcă
+                    </Text>
+                  </Link>
+                )}
+              </li>
+            ))}
+          </ul>
+        )
+      )}
     </>
   );
 };

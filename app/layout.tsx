@@ -13,8 +13,9 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: 'Byro - Documente și acte necesare proceselor birocratice în România',
   description:
-    'Verifică documentele necesare pentru orice proces în România, de la înmatriculare autovehicul sau schimbare buletin și pana la eliberare pașaport.',
-  keywords: 'documente necesare, acte necesare',
+    'Verifică documentele necesare pentru orice proces în România - Înmatriculare autovehicul, schimbare buletin, eliberare pașaport și multe altele.',
+  keywords:
+    'documente necesare, acte necesare, inmatriculare auto, schimbare buletin',
 };
 
 export default function RootLayout({

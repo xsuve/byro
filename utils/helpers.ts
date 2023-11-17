@@ -1,16 +1,28 @@
 import { ProcessStep } from '@/types';
 
-export function getMaxSteps(steps: ProcessStep[], currentStep = 1) {
-  let maxSteps = currentStep;
+export function getMaxSteps(steps: ProcessStep[]) {
+  function _calculateDepth(step: ProcessStep) {
+    if (!step.options) {
+      return 1;
+    }
 
-  steps.forEach((step) => {
-    step.options?.forEach((option) => {
+    let maxDepth = 0;
+    for (const option of step.options) {
       const nextStep = steps.find((s) => s.id === option.next);
       if (nextStep) {
-        maxSteps = Math.max(maxSteps, getMaxSteps([nextStep], currentStep + 1));
+        const depth = _calculateDepth(nextStep);
+        maxDepth = Math.max(maxDepth, depth);
       }
-    });
-  });
+    }
+
+    return 1 + maxDepth;
+  }
+
+  let maxSteps = 0;
+  for (const step of steps) {
+    const depth = _calculateDepth(step);
+    maxSteps = Math.max(maxSteps, depth);
+  }
 
   return maxSteps;
 }
