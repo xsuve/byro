@@ -113,7 +113,11 @@ export const Steps: FC<StepsProps> = ({ steps, documents }) => {
             )}>
             {currentStep.title}
           </Heading>
-          <div className='flex flex-col items-center gap-y-12'>
+          <div
+            className={clsx(
+              'flex flex-col gap-y-12',
+              currentStep.documents ? 'items-start' : 'items-center'
+            )}>
             <div className='flex justify-end items-center gap-x-4'>
               <StepsOptions
                 currentStep={currentStep}
