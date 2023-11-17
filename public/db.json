@@ -5,7 +5,7 @@
       "category": "autovehicul",
       "icon": "truck",
       "title": "Înmatriculare autovehicul",
-      "description": "Documente necesare pentru înmatricularea autovehicului nou sau second-hand în Romania.",
+      "description": "Documente necesare pentru înmatricularea autovehicului nou sau second-hand în România.",
       "keywords": "documente necesare inmatriculare autovehicul, acte necesare inmatriculare autovehicul, inmatriculare autovehicul romania",
       "official": {
         "title": "Direcția Generală Permise de Conducere și Înmatriculări",
@@ -16,7 +16,7 @@
       "steps": [
         {
           "id": "tip",
-          "title": "Ce tip de înmatriculare dorești?",
+          "title": "Ce tip de înmatriculare doriți?",
           "options": [
             {
               "id": "permanenta",
@@ -26,13 +26,13 @@
             {
               "id": "provizorie",
               "label": "Provizorie",
-              "next": "inmatriculare-provizorie"
+              "next": "documente-inmatriculare-provizorie"
             }
           ],
           "documents": null
         },
         {
-          "id": "inmatriculare-provizorie",
+          "id": "documente-inmatriculare-provizorie",
           "title": "Documente necesare înmatriculare provizorie autovehicul",
           "options": null,
           "documents": [
@@ -71,12 +71,12 @@
             {
               "id": "in-ue",
               "label": "În UE",
-              "next": "nou-in-ue"
+              "next": "documente-nou-in-ue"
             },
             {
               "id": "in-afara-ue",
               "label": "În afara UE",
-              "next": "nou-in-afara-ue"
+              "next": "documente-nou-in-afara-ue"
             }
           ],
           "documents": null
@@ -87,24 +87,24 @@
           "options": [
             {
               "id": "in-romania",
-              "label": "În Romania",
-              "next": "second-hand-in-romania"
+              "label": "În România",
+              "next": "documente-second-hand-in-romania"
             },
             {
               "id": "in-ue",
               "label": "În UE",
-              "next": "second-hand-in-ue"
+              "next": "documente-second-hand-in-ue"
             },
             {
               "id": "in-afara-ue",
               "label": "În afara UE",
-              "next": "second-hand-in-afara-ue"
+              "next": "documente-second-hand-in-afara-ue"
             }
           ],
           "documents": null
         },
         {
-          "id": "nou-in-ue",
+          "id": "documente-nou-in-ue",
           "title": "Documente necesare înmatriculare autovehicul nou din UE",
           "options": null,
           "documents": [
@@ -122,7 +122,7 @@
           ]
         },
         {
-          "id": "nou-in-afara-ue",
+          "id": "documente-nou-in-afara-ue",
           "title": "Documente necesare înmatriculare autovehicul nou din afara UE",
           "options": null,
           "documents": [
@@ -140,7 +140,7 @@
           ]
         },
         {
-          "id": "second-hand-in-romania",
+          "id": "documente-second-hand-in-romania",
           "title": "Documente necesare înmatriculare autovehicul second-hand în România",
           "options": null,
           "documents": [
@@ -160,7 +160,7 @@
           ]
         },
         {
-          "id": "second-hand-in-ue",
+          "id": "documente-second-hand-in-ue",
           "title": "Documente necesare înmatriculare autovehicul second-hand în UE",
           "options": null,
           "documents": [
@@ -181,7 +181,7 @@
           ]
         },
         {
-          "id": "second-hand-in-afara-ue",
+          "id": "documente-second-hand-in-afara-ue",
           "title": "Documente necesare înmatriculare autovehicul second-hand în afara UE",
           "options": null,
           "documents": [
@@ -199,6 +199,222 @@
             "placute-numar-inmatriculare-solicitant",
             "dovada-efectuare-inspectie-tehnica",
             "dovada-plata-placute"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "schimbare-buletin",
+      "category": "personal",
+      "icon": "identification",
+      "title": "Schimbare buletin",
+      "description": "Documente necesare pentru schimbarea buletinului/cărții de identitate în România.",
+      "keywords": "documente necesare schimbare buletin, acte necesare schimbare buletin, schimbare buletin romania",
+      "official": {
+        "title": "Direcția Generală pentru Evidența Persoanelor",
+        "link": "http://depabd.mai.gov.ro/documente_necesare.html"
+      },
+      "createdAt": "2023-11-16T16:44:38.405Z",
+      "updatedAt": "2023-11-16T16:44:38.405Z",
+      "steps": [
+        {
+          "id": "motiv",
+          "title": "Care este motivul schimbării buletinului?",
+          "options": [
+            {
+              "id": "expirare-termen-valabilitate-modificare-stare-civila-anulare-document-schimbare-sex-fizionomie",
+              "label": "Expirare termen valabilitate, modificare date stare civilă, anulare document, schimbare sex/fizionomie",
+              "next": "documente-schimbare-buletin-expirare-termen-valabilitate-modificare-stare-civila-anulare-document-schimbare-sex-fizionomie"
+            },
+            {
+              "id": "schimbare-domiciliu",
+              "label": "Schimbare domiciliu",
+              "next": "documente-schimbare-buletin-schimbare-domiciliu"
+            },
+            {
+              "id": "schimbare-denumire-strada-renumerotare-imobile",
+              "label": "Schimbare denumire stradă/renumerotare imobile",
+              "next": "documente-schimbare-buletin-schimbare-denumire-strada-renumerotare-imobile"
+            },
+            {
+              "id": "pierdere-furt-distrugere-deteriorare",
+              "label": "Pierdere, furt, distrugere, deteriorare",
+              "next": "documente-schimbare-buletin-pierdere-furt-distrugere-deteriorare"
+            }
+          ],
+          "documents": null
+        },
+        {
+          "id": "documente-schimbare-buletin-expirare-termen-valabilitate-modificare-stare-civila-anulare-document-schimbare-sex-fizionomie",
+          "title": "Documente necesare schimbare buletin la expirarea termenului de valabilitate, modificarea datelor de stare civilă, anularea documentului, schimbarea sexului/fizionomiei",
+          "options": null,
+          "documents": [
+            "cerere-eliberare-act-identitate",
+            "act-identitate",
+            "certificat-nastere",
+            "certificat-casatorie",
+            "certificat-hotarare-judecatoreasca-divort",
+            "extras-carte-funciara",
+            "document-dovada-achitare-contravaloare-act-identitate",
+            "hotarare-judecatoreasca-act-administrativ"
+          ]
+        },
+        {
+          "id": "documente-schimbare-buletin-schimbare-domiciliu",
+          "title": "Documente necesare schimbare buletin la schimbarea domiciliului",
+          "options": null,
+          "documents": [
+            "cerere-eliberare-act-identitate",
+            "act-identitate",
+            "certificat-nastere",
+            "certificat-casatorie",
+            "certificat-hotarare-judecatoreasca-divort",
+            "certificate-nastere-copii-varsta-pana-14-ani",
+            "extras-carte-funciara",
+            "document-dovada-achitare-contravaloare-act-identitate"
+          ]
+        },
+        {
+          "id": "documente-schimbare-buletin-schimbare-denumire-strada-renumerotare-imobile",
+          "title": "Documente necesare schimbare buletin la schimbarea denumirii străzii/renumerotării imobilelor",
+          "options": null,
+          "documents": [
+            "cerere-eliberare-act-identitate",
+            "act-identitate",
+            "certificat-nastere",
+            "certificat-casatorie",
+            "certificat-hotarare-judecatoreasca-divort",
+            "extras-carte-funciara",
+            "document-dovada-achitare-contravaloare-act-identitate"
+          ]
+        },
+        {
+          "id": "documente-schimbare-buletin-pierdere-furt-distrugere-deteriorare",
+          "title": "Documente necesare schimbare buletin la pierderea, furtul, distrugerea sau deteriorarea actului de identitate",
+          "options": null,
+          "documents": [
+            "cerere-eliberare-act-identitate",
+            "act-identitate",
+            "certificat-nastere",
+            "certificat-casatorie",
+            "certificat-hotarare-judecatoreasca-divort",
+            "extras-carte-funciara",
+            "document-oficial-cu-fotografie-data-recenta",
+            "document-dovada-achitare-contravaloare-act-identitate"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "eliberare-buletin",
+      "category": "personal",
+      "icon": "identification",
+      "title": "Eliberare buletin",
+      "description": "Documente necesare pentru eliberarea buletinului/cărții de identitate în România.",
+      "keywords": "documente necesare eliberare buletin, acte necesare eliberare buletin, eliberare buletin romania",
+      "official": {
+        "title": "Direcția Generală pentru Evidența Persoanelor",
+        "link": "http://depabd.mai.gov.ro/documente_necesare.html"
+      },
+      "createdAt": "2023-11-17T19:56:03.731Z",
+      "updatedAt": "2023-11-17T19:56:03.731Z",
+      "steps": [
+        {
+          "id": "tip",
+          "title": "Ce tip de buletin doriți?",
+          "options": [
+            {
+              "id": "permanent",
+              "label": "Permanent",
+              "next": "varsta"
+            },
+            {
+              "id": "provizoriu",
+              "label": "Provizoriu",
+              "next": "situatie"
+            },
+            {
+              "id": "dobandire-cetatenie",
+              "label": "Dobândire cetățenie",
+              "next": "documente-eliberare-buletin-dobandire-cetatenie"
+            }
+          ],
+          "documents": null
+        },
+        {
+          "id": "varsta",
+          "title": "Care este vârsta dumneavoastră?",
+          "options": [
+            {
+              "id": "intre-14-18-ani",
+              "label": "Între 14-18 ani",
+              "next": "documente-eliberare-buletin-intre-14-18-ani"
+            },
+            {
+              "id": "peste-18-ani",
+              "label": "Peste 18 ani",
+              "next": "documente-eliberare-buletin-peste-18-ani"
+            }
+          ],
+          "documents": null
+        },
+        {
+          "id": "situatie",
+          "title": "Care este situația eliberării buletinului provizoriu?",
+          "options": [
+            {
+              "id": "persoana-fizica-nu-poseda-documentele-eliberare-carte-identitate",
+              "label": "Persoana fizică nu posedă toate documentele necesare pentru eliberarea cărții de identitate",
+              "next": "documente-eliberare-buletin-persoana-fizica-nu-poseda-documentele-eliberare-carte-identitate"
+            },
+            {
+              "id": "cetateni-romani-cu-domiciliul-strainatate-locuiesc-temporar-romania",
+              "label": "Cetățeni români cu domiciliul în străinătate, care locuiesc temporar în România",
+              "next": "documente-eliberare-buletin-cetateni-romani-domiciliu-strainatate-locuiesc-temporar-romania"
+            }
+          ],
+          "documents": null
+        },
+        {
+          "id": "documente-eliberare-buletin-dobandire-cetatenie",
+          "title": "Documente necesare eliberare buletin la dobândirea cetățeniei române",
+          "options": null,
+          "documents": [
+            "cerere-eliberare-act-identitate",
+            "certificat-cetatenie-romana",
+            "certificate-stare-civila-romanesti",
+            "certificat-nastere",
+            "certificat-casatorie",
+            "certificate-nastere-copii-varsta-pana-14-ani",
+            "certificat-hotarare-judecatoreasca-divort",
+            "extras-carte-funciara",
+            "document-oficial-cu-fotografie-data-recenta",
+            "document-atesta-drept-sedere-rezidenta-teritoriu-romaniei",
+            "document-dovada-achitare-contravaloare-act-identitate"
+          ]
+        },
+        {
+          "id": "documente-eliberare-buletin-intre-14-18-ani",
+          "title": "Documente necesare eliberare buletin la împlinirea vârstei de 14 ani",
+          "options": null,
+          "documents": [
+            "cerere-eliberare-act-identitate",
+            "certificat-nastere",
+            "act-identitate-parinte",
+            "certificat-casatorie-parinti",
+            "certificat-hotarare-judecatoreasca-divort",
+            "document-dovada-adresa-domiciliu"
+          ]
+        },
+        {
+          "id": "documente-eliberare-buletin-peste-18-ani",
+          "title": "Documente necesare eliberare buletin la împlinirea vârstei de 18 ani",
+          "options": null,
+          "documents": [
+            "cerere-eliberare-act-identitate",
+            "declaratie-parinte-identitate-apartine-solicitant",
+            "extras-carte-funciara",
+            "document-dovada-achitare-contravaloare-act-identitate"
           ]
         }
       ]
@@ -365,6 +581,123 @@
       "title": "Plăcuţele cu numărul de înmatriculare, inclusiv în situația în care combinația numărului de înmatriculare a fost păstrată de fostul proprietar",
       "description": [
         "Acestea se restituie pe loc solicitantului, când se transferă automat noului proprietar, precum și în situația în care fostul proprietar a optat pentru păstrarea combinației numărului de înmatriculare, numai dacă îndeplinesc cerințele impuse de standardele în vigoare, iar combinația numărului de înmatriculare nu a fost restricționată conform legii."
+      ],
+      "download": null
+    },
+    {
+      "id": "cerere-eliberare-act-identitate",
+      "title": "Cererea pentru eliberarea actului de indentitate.",
+      "description": null,
+      "download": null
+    },
+    {
+      "id": "certificat-nastere",
+      "title": "Certificatul de naștere.",
+      "description": null,
+      "download": null
+    },
+    {
+      "id": "certificat-casatorie",
+      "title": "Certificatul de căsătorie",
+      "description": [
+        "În cazul persoanelor căsătorite sau al soţului supravieţuitor."
+      ],
+      "download": null
+    },
+    {
+      "id": "certificat-hotarare-judecatoreasca-divort",
+      "title": "Certificatul/hotărârea judecătorească de divorț definitivă/irevocabilă",
+      "description": [
+        "după caz."
+      ],
+      "download": null
+    },
+    {
+      "id": "extras-carte-funciara",
+      "title": "Extrasul de carte funciară",
+      "description": [
+        "sau documentul cu care se face dovada adresei de domiciliu, precum şi, după caz, cel cu care se face dovada adresei de reşedinţă.",
+        "Extrasul de carte funciară trebuie să fie obţinut cu cel mult 30 de zile anterior datei depunerii cererii."
+      ],
+      "download": null
+    },
+    {
+      "id": "document-dovada-achitare-contravaloare-act-identitate",
+      "title": "Documentul cu care face dovada achitării contravalorii actului de identitate.",
+      "description": null,
+      "download": null
+    },
+    {
+      "id": "hotarare-judecatoreasca-act-administrativ",
+      "title": "Horărârea judecătorească sau actul administrativ",
+      "description": [
+        "În baza căruia s-au modificat datele de stare civilă."
+      ],
+      "download": null
+    },
+    {
+      "id": "certificate-nastere-copii-varsta-pana-14-ani",
+      "title": "Certificatele de naștere a copiilor cu vârsta de până la 14 ani",
+      "description": [
+        "Care îşi schimbă domiciliul împreună cu solicitantul actului de identitate."
+      ],
+      "download": null
+    },
+    {
+      "id": "document-oficial-cu-fotografie-data-recenta",
+      "title": "Document oficial cu fotografie de dată recentă",
+      "description": [
+        "Permis de conducere sau paşaport pentru persoanele care nu au preluată imaginea facială în R.N.E.P."
+      ],
+      "download": null
+    },
+    {
+      "id": "certificat-cetatenie-romana",
+      "title": "Certificatul de cetățenie română",
+      "description": [
+        "În cazul minorilor care au împlinit vârsta de 14 ani, dovada cetăţeniei române se face cu certificatul de cetăţenie română sau, după caz, cu certificatul de naştere românesc al minorului, însoţit de certificatul de cetăţenie al unuia dintre părinţi."
+      ],
+      "download": null
+    },
+    {
+      "id": "certificate-stare-civila-romanesti",
+      "title": "Certificatele de stare civilă românești ale solicitantului.",
+      "description": null,
+      "download": null
+    },
+    {
+      "id": "document-atesta-drept-sedere-rezidenta-teritoriu-romaniei",
+      "title": "Document care atestă dreptul de ședere/rezidență pe teritoriul României",
+      "description": [
+        "Eliberat de Inspectoratul General pentru Imigrări/structurile subordonate, după caz."
+      ],
+      "download": null
+    },
+    {
+      "id": "certificat-casatorie-parinti",
+      "title": "Certificatul de căsătorie al părinților",
+      "description": null,
+      "download": null
+    },
+    {
+      "id": "act-identitate-parinte",
+      "title": "Actul de identitate al unuia dintre părinți",
+      "description": [
+        "sau al reprezentantului legal."
+      ],
+      "download": null
+    },
+    {
+      "id": "document-dovada-adresa-domiciliu",
+      "title": "Document cu care se face dovada adresei de domiciliu.",
+      "description": null,
+      "download": null
+    },
+    {
+      "id": "declaratie-parinte-identitate-apartine-solicitant",
+      "title": "Declarația unui dintre parinți",
+      "description": [
+        "ori a unei terţe persoane, din care să rezulte faptul că identitatea declarată în cererea pentru eliberarea actului de identitate, coroborată cu imaginea facială preluată ori cu fotografia ataşată cererii, aparţine solicitantului."
       ],
       "download": null
     }
