@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>{{siteName}}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style type="text/css">
+      html {
+        -webkit-print-color-adjust: exact;
+      }
+      body {
+        font-family: 'Arial', sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    {{#if options.includeLogo}}
+      <div class="absolute w-10 h-10 top-10 right-10">
+        <img src="http://localhost:3000/img/logo-icon-black.svg">
+      </div>
+    {{/if}}
+
+    <div class="m-10">
+      <div class="mt-40 text-justify">
+        <h3 class="text-center text-lg font-bold mb-4">Domnule șef de serviciu,</h3>
+        <p class="indent-8">
+          Subsemnatul/Subsemnata, <u>{{fieldsValues.firstName}} {{fieldsValues.lastName}}</u>, cu domiciliul/reședința în localitatea/județul <u>{{fieldsValues.placeOfBirth}}</u>, <u>{{fieldsValues.country}}</u>, posesor/posesoare al/a actului de identitate seria <u>{{fieldsValues.series}}</u> nr. <u>{{fieldsValues.number}}</u>, eliberat de <u>{{fieldsValues.issuedBy}}</u>, solicit prezentarea la examenul pentru obținerea permisului de conducere categoria B.
+        </p>
+        <p class="indent-8">
+          Menționez că pregătirea necesară susținerii acestui examen am efectuat-o în cadrul Școlii de conducători auto <u>{{fieldsValues.drivingSchoolName}}</u>.
+        </p>
+        <p class="indent-8">
+          Anexez dosarul de examinare.
+        </p>
+        <ul class="indent-8 list-disc list-inside">
+          <li>solicit <input type="checkbox"> / nu solicit <input type="checkbox"> editarea permisului de conducere;</li>
+          <li>solicit examinarea teoretică în limba engleză <input type="checkbox"> franceză <input type="checkbox"> germană <input type="checkbox"> (pentru cetățenii străini și pentru cetățenii statelor membre ale Uniunii Europene sau ale Spațiului Economic European);</li>
+          <li>solicit examinarea teoretică în limba maternă maghiară <input type="checkbox"> germană <input type="checkbox">.</li>
+        </ul>
+        <p class="indent-8">
+          <input type="checkbox">
+          Sunt de acord cu prelucrarea datelor personale în condițiile respectării prevederilor Legii nr. 677/2001 pentru protecția persoanelor cu privire la prelucrarea datelor cu caracter personal și libera circulație a acestor date, cu modificările și completările ulterioare.
+        </p>
+        <div class="mt-10 flex justify-between">
+          <p class="indent-8">
+            Data: {{todayDate}}
+          </p>
+          <p>
+            Semnătura ___________________
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {{#each processDocumentsImages}}
+      <div style="page-break-before: always;" class="m-10">
+        <div>
+          <img src="{{{this}}}" alt="" class="max-w-full">
+        </div>
+      </div>
+    {{/each}}
+
+  </body>
+
+</html>

@@ -1,0 +1,33 @@
+{
+  "name": "Papers API",
+  "version": "1.0.0",
+  "description": "Node.JS Server for the Papers API",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "papers"
+  ],
+  "author": "xsuve",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/vision": "^2.4.2",
+    "aws-sdk": "^2.854.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "handlebars": "^4.7.7",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "node-fetch": "2.0",
+    "nodemailer": "^6.7.4",
+    "puppeteer": "^8.0.0",
+    "qrcode": "^1.4.4",
+    "sharp": "^0.30.2",
+    "socket.io": "^4.2.0",
+    "text-from-image": "^1.1.1"
+  }
+}

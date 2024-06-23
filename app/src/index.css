@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-space-grotesk: 'Space Grotesk';
+
+    --vermilion-50: 4 100% 97%; /* #fff2f1; */
+    --vermilion-100: 6 100% 94%; /* #ffe4e1; */
+    --vermilion-200: 5 100% 89%; /* #ffcdc8; */
+    --vermilion-300: 5 100% 82%; /* #ffa9a1; */
+    --vermilion-400: 5 99% 71%; /* #fe776b; */
+    --vermilion-500: 5 92% 62%; /* #f75445; */
+    --vermilion-600: 5 79% 51%; /* #e42f1e; */
+    --vermilion-700: 5 80% 42%; /* #c02315; */
+    --vermilion-800: 5 77% 35%; /* #9f2115; */
+    --vermilion-900: 5 68% 31%; /* #832219; */
+    --vermilion-950: 5 82% 15%; /* #480c07; */
+    --aquamarine: 187 97% 15%;
+    --creamy: 44 48% 95%;
+ 
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --radius: 0.5rem;
+  }
+}
+ 
+@layer base {
+
+}
