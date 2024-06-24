@@ -30,8 +30,10 @@ type Story = StoryObj<typeof meta>;
 
 export const Single: Story = {
   args: {
+    value: 'Audi',
     size: 'sm',
     shape: 'md',
+    disabled: false,
   },
 };
 
