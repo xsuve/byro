@@ -2,5 +2,6 @@ import { Button } from './Button/Button';
 import { Text } from './Text/Text';
 import { Input } from './Input/Input';
 import { Icon } from './Icon/Icon';
+import { Badge } from './Badge/Badge';
 
-export { Button, Text, Input, Icon };
+export { Button, Text, Input, Icon, Badge };

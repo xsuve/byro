@@ -37,7 +37,7 @@ export const Single: Story = {
 
 export const Sizes: Story = {
   render: () => (
-    <div className='flex gap-x-6'>
+    <div className='flex items-start gap-x-6'>
       {sizes.map((size) => (
         <Input size={size} placeholder={size} />
       ))}
