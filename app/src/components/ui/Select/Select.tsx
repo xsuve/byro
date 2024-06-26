@@ -6,6 +6,7 @@ import { Check, ChevronDown, ChevronUp } from 'lucide-react';
 import { cn } from '@/utils/helpers';
 import { Shapes, Sizes } from '../theme';
 import { cva } from 'class-variance-authority';
+import { Text } from '../Text/Text';
 
 const triggerVariants = cva(
   [
@@ -226,48 +227,44 @@ export interface SelectStyleProps {
 
 export interface SelectProps extends SelectStyleProps {
   options: SelectOption[];
+  label?: string;
   defaultValue?: string;
   disabled?: boolean;
+  onChange?: (value: string) => void;
 }
 
 const Select: React.FC<SelectProps> = ({
   options,
+  label,
   size,
   shape,
   defaultValue = options[0].value,
   disabled = false,
+  onChange,
 }) => {
   return (
-    <Root defaultValue={defaultValue}>
-      <Trigger
-        className={cn(triggerVariants({ size, shape }))}
-        disabled={disabled}>
-        <Value placeholder='Audi' />
-      </Trigger>
-      <Content className={cn(contentVariants({ shape }))}>
-        {options.map((option) => (
-          <Item
-            key={option.value}
-            value={option.value}
-            className={cn(itemVariants({ size }))}>
-            {option.label}
-          </Item>
-        ))}
-      </Content>
-    </Root>
+    <div className='flex flex-col gap-y-1'>
+      {label && <Text size='sm'>{label}</Text>}
+      <Root onValueChange={onChange} defaultValue={defaultValue}>
+        <Trigger
+          className={cn(triggerVariants({ size, shape }))}
+          disabled={disabled}>
+          <Value />
+        </Trigger>
+        <Content className={cn(contentVariants({ shape }))}>
+          {options.map((option) => (
+            <Item
+              key={option.value}
+              value={option.value}
+              className={cn(itemVariants({ size }))}>
+              {option.label}
+            </Item>
+          ))}
+        </Content>
+      </Root>
+    </div>
   );
 };
 Select.displayName = 'Select';
 
-export {
-  Select,
-  // SelectGroup,
-  // SelectValue,
-  // SelectTrigger,
-  // SelectContent,
-  // SelectLabel,
-  // SelectItem,
-  // SelectSeparator,
-  // SelectScrollUpButton,
-  // SelectScrollDownButton,
-};
+export { Select };

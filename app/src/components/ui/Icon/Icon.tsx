@@ -43,7 +43,7 @@ const Icon: React.FC<IconProps> = ({
   icon,
   className,
   size = 'sm',
-  color,
+  color = 'vermilion',
   isSpinning = false,
   ...props
 }) => {

@@ -2,6 +2,7 @@ import * as React from 'react';
 import { cn } from '@/utils/helpers';
 import { cva } from 'class-variance-authority';
 import { Shapes, Sizes } from '../theme';
+import { Text } from '../Text/Text';
 
 const inputVariants = cva(
   [
@@ -43,18 +44,28 @@ export interface InputStyleProps {
 }
 
 export interface InputProps
-  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'>,
-    InputStyleProps {}
+  extends Omit<
+      React.InputHTMLAttributes<HTMLInputElement>,
+      'size' | 'onChange'
+    >,
+    InputStyleProps {
+  label?: string;
+  onChange?: (value: string) => void;
+}
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, type, size, shape, ...props }, ref) => {
+  ({ className, type, label, size, shape, onChange, ...props }, ref) => {
     return (
-      <input
-        type={type}
-        className={cn(inputVariants({ size, shape, className }))}
-        ref={ref}
-        {...props}
-      />
+      <div className='flex flex-col gap-y-1'>
+        {label && <Text size='sm'>{label}</Text>}
+        <input
+          type={type}
+          className={cn(inputVariants({ size, shape, className }))}
+          ref={ref}
+          onChange={(e) => onChange?.(e.target.value)}
+          {...props}
+        />
+      </div>
     );
   }
 );

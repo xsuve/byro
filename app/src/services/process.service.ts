@@ -1,16 +1,20 @@
-import { Process } from '@/models/process.model';
+import { Process } from '@shared/models/Process';
 import { GET } from '@/utils/api';
 
 const endpoint = '/processes';
 
 export async function getAllProcesses() {
-  try {
-    const response = await GET<Process[]>(endpoint);
+  const response = await GET<Process[]>(endpoint);
 
-    console.log(response.data);
+  return response.data;
+}
 
-    return response.data;
-  } catch (error) {
-    throw error;
+export async function getProcess(slug: string | undefined) {
+  if (!slug) {
+    throw new Error('Slug not set.');
   }
+
+  const response = await GET<Process>(`${endpoint}/${slug}`);
+
+  return response.data;
 }

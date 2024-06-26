@@ -1,5 +1,6 @@
-import Error from './Error/Error';
-import Landing from './Landing/Landing';
-import Process from './Process/Process';
+import ErrorPage from './ErrorPage/ErrorPage';
+import LandingPage from './LandingPage/LandingPage';
+import LoadingPage from './LoadingPage/LoadingPage';
+import ProcessPage from './ProcessPage/ProcessPage';
 
-export { Error, Landing, Process };
+export { ErrorPage, LandingPage, ProcessPage, LoadingPage };

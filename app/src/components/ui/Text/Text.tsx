@@ -3,6 +3,7 @@ import { cva } from 'class-variance-authority';
 import { cn } from '@/utils/helpers';
 import { Sizes } from '../theme';
 import { TextColors, TextSizeElementMap } from './Text.types';
+import { Link } from 'react-router-dom';
 
 const textVariants = cva(['font-space-grotesk'], {
   variants: {
@@ -32,16 +33,45 @@ export interface TextStyleProps {
 
 export interface TextProps
   extends Omit<React.BaseHTMLAttributes<HTMLParagraphElement>, 'color'>,
-    TextStyleProps {}
+    TextStyleProps {
+  link?: string;
+  htmlFor?: string;
+}
 
 const Text = React.forwardRef<HTMLParagraphElement, TextProps>(
-  ({ children, className, size = 'sm', color, ...props }, ref) => {
-    const Comp = TextSizeElementMap[size] as React.ElementType;
+  (
+    { children, link, className, htmlFor, size = 'sm', color, ...props },
+    ref
+  ) => {
+    const Comp = htmlFor
+      ? 'label'
+      : (TextSizeElementMap[size] as React.ElementType);
+
+    if (link) {
+      return (
+        <Link to={link}>
+          <Comp
+            className={cn(
+              textVariants({ size, className, color }),
+              htmlFor && 'cursor-pointer'
+            )}
+            ref={ref}
+            htmlFor={htmlFor}
+            {...props}>
+            {children}
+          </Comp>
+        </Link>
+      );
+    }
 
     return (
       <Comp
-        className={cn(textVariants({ size, className, color }))}
+        className={cn(
+          textVariants({ size, className, color }),
+          htmlFor && 'cursor-pointer'
+        )}
         ref={ref}
+        htmlFor={htmlFor}
         {...props}>
         {children}
       </Comp>

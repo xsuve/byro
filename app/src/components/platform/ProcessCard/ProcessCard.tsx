@@ -18,7 +18,7 @@ const ProcessCard: React.FC<ProcessCardProps> = ({
   const { t } = useTranslation();
 
   return (
-    <Link to={`/process/${t(slug)}`}>
+    <Link to={`/process/${slug}`}>
       <div
         className={cn(
           'flex flex-col gap-y-4',
@@ -42,7 +42,7 @@ const ProcessCard: React.FC<ProcessCardProps> = ({
           )}>
           <div className={cn('flex flex-col')}>
             <Text size='sm' color='gray'>
-              {t('platform:process_last_updated')}
+              {t('platform:process_card.last_checked')}
             </Text>
             <Text size='sm'>11 noiembrie, 2024</Text>
           </div>

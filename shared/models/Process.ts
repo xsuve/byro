@@ -8,6 +8,37 @@ export interface ProcessOfficial {
   link: string;
 }
 
+export type ProcessFieldType = 'text' | 'select' | 'boolean' | 'date';
+
+export interface ProcessFieldOption {
+  value: string;
+  label: string;
+}
+export interface ProcessField {
+  type: ProcessFieldType;
+  name: string;
+  label: string;
+  options?: ProcessFieldOption[]; // select type
+  checked?: boolean; // boolean type
+}
+
+export type ProcessDocumentType = 'identity_card' | 'birth_certificate';
+
+export interface ProcessDocument {
+  slug: ProcessDocumentType;
+  label: string;
+}
+
+export type ProcessStepType = 'fields' | 'documents' | 'generate';
+
+export interface ProcessStep {
+  type: ProcessStepType;
+  title: string;
+  slug: string;
+  fields?: ProcessField[];
+  documents?: ProcessDocument[];
+}
+
 export interface Process {
   slug: string;
   category: ProcessCategory;
@@ -17,4 +48,5 @@ export interface Process {
   official: ProcessOfficial;
   createdAt: Date;
   updatedAt: Date;
+  steps: ProcessStep[];
 }

@@ -1,3 +1,26 @@
 {
-  "process_last_updated": "Ultima verificare"
+  "process_card": {
+    "last_checked": "Ultima verificare"
+  },
+  "process": {
+    "steps": {
+      "general_informations": "Informații generale",
+      "documents_verification": "Verificare documente",
+      "files_generation": "Generare fișiere",
+      "continue": "Continuă",
+      "back": "Înapoi",
+      "download": "Descarcă",
+      "check_fields_alert": {
+        "title": "Verificați datele",
+        "text": "Vă rugăm să verificați ca toate datele să fie corecte înainte să treceți la pasul următor."
+      },
+      "documents_info_alert": {
+        "title": "Ajutor documente",
+        "text": "Documentele existente în cont vor fi marcate cu o bifă. Celelalte trebuie încărcate."
+      },
+      "options": "Opțiuni"
+    }
+  },
+  "back_home": "Înapoi acasă",
+  "error_message": "Mesajul erorii"
 }

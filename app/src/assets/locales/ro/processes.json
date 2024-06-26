@@ -1,6 +1,5 @@
 {
   "vehicle_registration": {
-    "slug": "inmatriculare-autovehicul",
     "category": {
       "slug": "autovehicul",
       "title": "Autovehicul"
@@ -12,7 +11,6 @@
     }
   },
   "id_card_changing": {
-    "slug": "schimbare-carte-identitate",
     "category": {
       "slug": "stare-civila",
       "title": "Stare civila"

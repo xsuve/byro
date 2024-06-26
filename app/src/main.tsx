@@ -8,24 +8,24 @@ import {
 import '../i18n';
 import './index.css';
 
-import { Landing, Error, Process } from '@/pages';
+import { LandingPage, ErrorPage, ProcessPage } from '@/pages';
 
 const router = createBrowserRouter([
   {
     path: '/',
     index: true,
-    element: <Landing />,
-    errorElement: <Error />,
+    element: <LandingPage />,
+    errorElement: <ErrorPage />,
   },
   {
     path: '/process',
     element: <Navigate to='/' replace />,
-    errorElement: <Error />,
+    errorElement: <ErrorPage />,
   },
   {
     path: '/process/:slug',
-    element: <Process />,
-    errorElement: <Error />,
+    element: <ProcessPage />,
+    errorElement: <ErrorPage />,
   },
 ]);
 

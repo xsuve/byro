@@ -1,9 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getAll = getAll;
+exports.getOne = getOne;
+const countryList_1 = require("../utils/countryList");
 const mockProcesses = [
     {
-        slug: 'processes:vehicle_registration.slug',
+        slug: 'inmatriculare-autovehicul',
         category: {
             slug: 'processes:vehicle_registration.category.slug',
             title: 'processes:vehicle_registration.category.title',
@@ -17,9 +19,57 @@ const mockProcesses = [
         },
         createdAt: new Date(),
         updatedAt: new Date(),
+        steps: [
+            {
+                type: 'fields',
+                title: 'platform:process.steps.general_informations',
+                slug: 'general-informations',
+                fields: [
+                    { type: 'text', name: 'firstName', label: 'fields:first_name' },
+                    { type: 'text', name: 'lastName', label: 'fields:last_name' },
+                    {
+                        type: 'select',
+                        name: 'country',
+                        label: 'fields:country',
+                        options: countryList_1.countryList.map((country) => ({
+                            value: country.code,
+                            label: country.translation,
+                        })),
+                    },
+                ],
+            },
+            {
+                type: 'documents',
+                title: 'platform:process.steps.documents_verification',
+                slug: 'documents-verification',
+                documents: [
+                    { slug: 'identity_card', label: 'documents:identity_card' },
+                    { slug: 'birth_certificate', label: 'documents:birth_certificate' },
+                ],
+            },
+            {
+                type: 'generate',
+                title: 'platform:process.steps.files_generation',
+                slug: 'files-generation',
+                fields: [
+                    {
+                        type: 'boolean',
+                        name: 'hideLogo',
+                        label: 'fields:hide_documents_logo',
+                        checked: true,
+                    },
+                    {
+                        type: 'boolean',
+                        name: 'savePersonalDocuments',
+                        label: 'fields:save_personal_documents',
+                        checked: false,
+                    },
+                ],
+            },
+        ],
     },
     {
-        slug: 'processes:id_card_changing.slug',
+        slug: 'schimbare-carte-identitate',
         category: {
             slug: 'processes:id_card_changing.category.slug',
             title: 'processes:id_card_changing.category.title',
@@ -33,8 +83,14 @@ const mockProcesses = [
         },
         createdAt: new Date(),
         updatedAt: new Date(),
+        steps: [],
     },
 ];
 function getAll(req, res) {
     return res.status(200).json(mockProcesses);
+}
+function getOne(req, res) {
+    return res
+        .status(200)
+        .json(mockProcesses.find((process) => process.slug === req.params.slug));
 }
