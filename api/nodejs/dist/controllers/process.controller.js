@@ -43,8 +43,16 @@ const mockProcesses = [
                 title: 'platform:process.steps.documents_verification',
                 slug: 'documents-verification',
                 documents: [
-                    { slug: 'identity_card', label: 'documents:identity_card' },
-                    { slug: 'birth_certificate', label: 'documents:birth_certificate' },
+                    {
+                        slug: 'birth-certificate',
+                        type: 'birth_certificate',
+                        label: 'documents:birth_certificate',
+                    },
+                    {
+                        slug: 'identity-card',
+                        type: 'identity_card',
+                        label: 'documents:identity_card',
+                    },
                 ],
             },
             {

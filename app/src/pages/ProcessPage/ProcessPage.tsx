@@ -62,7 +62,7 @@ export default function ProcessPage() {
             'bg-zinc-100 h-screen p-12'
           )}>
           <div className='flex flex-col justify-between h-full'>
-            <div className='flex flex-col gap-y-12'>
+            <div className='flex flex-col items-start gap-y-12'>
               <div className='flex flex-col gap-y-8'>
                 <Text
                   link='/'

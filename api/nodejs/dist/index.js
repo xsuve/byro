@@ -57,6 +57,8 @@ const express_1 = __importDefault(require("express"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const cors_1 = __importDefault(require("cors"));
 const process_route_1 = __importDefault(require("./routes/process.route"));
+const user_route_1 = __importDefault(require("./routes/user.route"));
+const document_route_1 = __importDefault(require("./routes/document.route"));
 dotenv_1.default.config();
 const app = (0, express_1.default)();
 const port = process.env.PORT || 6173;
@@ -67,6 +69,8 @@ app.get('/', (req, res) => {
 });
 // Routes
 app.use('/processes', process_route_1.default);
+app.use('/users', user_route_1.default);
+app.use('/documents', document_route_1.default);
 app.listen(port, () => {
     console.log(`[API] Server is running at http://localhost:${port}`);
 });

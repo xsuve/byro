@@ -51,20 +51,34 @@ export const Variants: Story = {
 
 export const Sizes: Story = {
   render: () => (
-    <div className='flex gap-x-6'>
-      {sizes.map((size) => (
-        <Logo size={size} />
-      ))}
+    <div className='flex flex-col gap-y-6'>
+      <div className='flex gap-x-6'>
+        {sizes.map((size) => (
+          <Logo size={size} />
+        ))}
+      </div>
+      <div className='flex gap-x-6'>
+        {sizes.map((size) => (
+          <Logo size={size} variant='icon' />
+        ))}
+      </div>
     </div>
   ),
 };
 
 export const Colors: Story = {
   render: () => (
-    <div className='flex gap-x-6'>
-      {logoColors.map((color) => (
-        <Logo color={color} />
-      ))}
+    <div className='flex flex-col gap-y-6'>
+      <div className='flex gap-x-6'>
+        {logoColors.map((color) => (
+          <Logo color={color} />
+        ))}
+      </div>
+      <div className='flex gap-x-6'>
+        {logoColors.map((color) => (
+          <Logo color={color} variant='icon' />
+        ))}
+      </div>
     </div>
   ),
 };

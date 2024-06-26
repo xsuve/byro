@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import { Process } from '@shared/models/Process';
+import { DocumentType } from '@shared/models/Document';
 import { countryList } from '../utils/countryList';
 
 const mockProcesses: Process[] = [
@@ -42,8 +43,16 @@ const mockProcesses: Process[] = [
         title: 'platform:process.steps.documents_verification',
         slug: 'documents-verification',
         documents: [
-          { slug: 'identity_card', label: 'documents:identity_card' },
-          { slug: 'birth_certificate', label: 'documents:birth_certificate' },
+          {
+            slug: 'birth-certificate',
+            type: 'birth_certificate',
+            label: 'documents:birth_certificate',
+          },
+          {
+            slug: 'identity-card',
+            type: 'identity_card',
+            label: 'documents:identity_card',
+          },
         ],
       },
       {

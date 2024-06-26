@@ -64,6 +64,8 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 
 import processRoute from './routes/process.route';
+import userRoute from './routes/user.route';
+import documentRoute from './routes/document.route';
 
 dotenv.config();
 
@@ -79,6 +81,8 @@ app.get('/', (req: Request, res: Response) => {
 
 // Routes
 app.use('/processes', processRoute);
+app.use('/users', userRoute);
+app.use('/documents', documentRoute);
 
 app.listen(port, () => {
   console.log(`[API] Server is running at http://localhost:${port}`);

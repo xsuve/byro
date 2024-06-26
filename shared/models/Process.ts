@@ -1,3 +1,5 @@
+import { ProcessDocument } from './Document';
+
 export interface ProcessCategory {
   slug: string;
   title: string;
@@ -20,13 +22,6 @@ export interface ProcessField {
   label: string;
   options?: ProcessFieldOption[]; // select type
   checked?: boolean; // boolean type
-}
-
-export type ProcessDocumentType = 'identity_card' | 'birth_certificate';
-
-export interface ProcessDocument {
-  slug: ProcessDocumentType;
-  label: string;
 }
 
 export type ProcessStepType = 'fields' | 'documents' | 'generate';

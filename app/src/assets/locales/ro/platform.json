@@ -22,5 +22,15 @@
     }
   },
   "back_home": "Înapoi acasă",
-  "error_message": "Mesajul erorii"
+  "error_message": "Mesajul erorii",
+  "upload": "Încarcă",
+  "uploading": "Se încarcă",
+  "process_add_document": {
+    "or": "sau",
+    "upload_required_document": "Încarcă documentele necesare",
+    "file_type_max_size": "Fișiere png/jpg/pdf, max. 10MB",
+    "choose_document": "Alege document",
+    "scan_documents": "Scanează documentele",
+    "scan_qrcode_upload_documents": "Scanează codul QR și încarcă documentele cu telefonul."
+  }
 }

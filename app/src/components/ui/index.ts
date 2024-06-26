@@ -9,6 +9,7 @@ import { Tabs } from './Tabs/Tabs';
 import { Steps } from './Steps/Steps';
 import { Alert } from './Alert/Alert';
 import { Checkbox } from './Checkbox/Checkbox';
+import { Dialog } from './Dialog/Dialog';
 
 export {
   Button,
@@ -22,4 +23,5 @@ export {
   Steps,
   Alert,
   Checkbox,
+  Dialog,
 };

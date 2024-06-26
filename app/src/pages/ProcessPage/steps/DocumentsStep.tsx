@@ -1,15 +1,31 @@
 import { ProcessDocumentCard } from '@/components';
 import { Alert, Button } from '@/components/ui';
+import { LoadingPage } from '@/pages';
+import { getUserDocuments } from '@/services/user.service';
 import { useSteps } from '@/stores';
 import { useTranslation } from 'react-i18next';
+import useSWR from 'swr';
 
 export interface DocumentsStepProps {}
 
 const DocumentsStep: React.FC<DocumentsStepProps> = () => {
   const { currentStep, prevStep, nextStep } = useSteps();
   const { t } = useTranslation();
+  const {
+    data: userDocuments,
+    error,
+    isLoading,
+  } = useSWR(`/user/1/documents`, () => getUserDocuments(1));
 
-  return currentStep ? (
+  if (isLoading) {
+    return <LoadingPage />;
+  }
+
+  if (error) {
+    throw error;
+  }
+
+  return userDocuments && currentStep ? (
     <div className='flex flex-col justify-between gap-y-24'>
       <div className='flex flex-col gap-y-12'>
         <Alert
@@ -19,7 +35,15 @@ const DocumentsStep: React.FC<DocumentsStepProps> = () => {
         />
         <div className='flex flex-col gap-y-6'>
           {(currentStep.documents || []).map((document) => (
-            <ProcessDocumentCard key={document.slug} {...document} />
+            <ProcessDocumentCard
+              key={document.slug}
+              {...document}
+              userHasDocument={Boolean(
+                userDocuments.find(
+                  (userDocument) => userDocument.slug === document.slug
+                )
+              )}
+            />
           ))}
         </div>
       </div>
