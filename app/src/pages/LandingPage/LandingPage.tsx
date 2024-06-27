@@ -2,6 +2,8 @@ import { ProcessCard } from '@/components';
 import { getAllProcesses } from '@/services/process.service';
 import useSWR from 'swr';
 import LoadingPage from '../LoadingPage/LoadingPage';
+import { Alert, Button, Checkbox, Input, Select, Text } from '@/components/ui';
+import { sizes, variants } from '@/components/ui/theme';
 
 export default function LandingPage() {
   const {

@@ -13,8 +13,8 @@ export function GET<T>(url: string) {
   return api.get<T>(url);
 }
 
-export function POST<T>(url: string, data = {} as T) {
-  return api.post<T>(url, data);
+export function POST<T>(url: string, data = {} as T, options: any) {
+  return api.post<T>(url, data, options);
 }
 
 export function UPDATE(url: string, data = {}) {

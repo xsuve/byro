@@ -8,3 +8,14 @@ export function cn(...inputs: ClassValue[]) {
 export function sleep(delay: number) {
   new Promise((resolve) => setTimeout(resolve, delay));
 }
+
+export function downloadFile(url: string) {
+  const a = document.createElement('a');
+  a.href = url;
+  a.target = '_blank';
+  a.download = 'byro.pdf';
+  a.rel = 'noreferrer';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}

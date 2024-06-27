@@ -18,7 +18,15 @@
         "title": "Ajutor documente",
         "text": "Documentele existente în cont vor fi marcate cu o bifă. Celelalte trebuie încărcate."
       },
-      "options": "Opțiuni"
+      "configure_pdf_alert": {
+        "title": "Configurează PDF-ul",
+        "text": "Setează optiunile pentru PDF-ul tău final generat de proces."
+      },
+      "hide_documents_logo": "Ascunde logo-ul din documente",
+      "save_personal_documents": "Salvează documentele personale în cont",
+      "options": "Opțiuni",
+      "generating_pdf_folder": "Se genereaza dosarul PDF",
+      "pdf_folder_generate_text": "Odată ce dosarul PDF este gată, acesta se va descărca automat în calculatorul dumneavoastră."
     }
   },
   "back_home": "Înapoi acasă",

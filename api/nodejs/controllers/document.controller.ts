@@ -9,6 +9,6 @@ export async function getAddQRCode(req: Request, res: Response) {
 
     return res.status(200).json(qrCode);
   } catch (error) {
-    return res.status(500);
+    return res.status(500).send(error);
   }
 }

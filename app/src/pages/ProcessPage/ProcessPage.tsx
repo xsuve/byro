@@ -20,13 +20,14 @@ export default function ProcessPage() {
   } = useSWR(`/process/${slug}`, () => getProcess(slug));
 
   const { setSteps, currentStep, currentStepIndex } = useSteps();
-  const { setFieldValue } = useProcess();
+  const { setProcess, setFieldValue } = useProcess();
 
   useEffect(() => {
     if (!process) {
       return;
     }
 
+    setProcess(process);
     setSteps(process.steps);
 
     process.steps.map(

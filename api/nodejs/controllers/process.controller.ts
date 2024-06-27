@@ -1,7 +1,10 @@
 import { Request, Response } from 'express';
 import { Process } from '@shared/models/Process';
-import { DocumentType } from '@shared/models/Document';
 import { countryList } from '../utils/countryList';
+import path from 'path';
+import { compile } from 'handlebars';
+import { readFileSync } from 'fs';
+import puppeteer from 'puppeteer';
 
 const mockProcesses: Process[] = [
   {
@@ -36,6 +39,11 @@ const mockProcesses: Process[] = [
               label: country.translation,
             })),
           },
+          {
+            type: 'text',
+            name: 'drivingSchoolName',
+            label: 'fields:driving_school_name',
+          },
         ],
       },
       {
@@ -63,13 +71,13 @@ const mockProcesses: Process[] = [
           {
             type: 'boolean',
             name: 'hideLogo',
-            label: 'fields:hide_documents_logo',
+            label: 'platform:process.steps.hide_documents_logo',
             checked: true,
           },
           {
             type: 'boolean',
             name: 'savePersonalDocuments',
-            label: 'fields:save_personal_documents',
+            label: 'platform:process.steps.save_personal_documents',
             checked: false,
           },
         ],
@@ -103,4 +111,51 @@ export function getOne(req: Request, res: Response): Response {
   return res
     .status(200)
     .json(mockProcesses.find((process) => process.slug === req.params.slug));
+}
+
+export async function generatePDFFolder(req: Request, res: Response) {
+  const { slug } = req.params;
+
+  try {
+    const templateFile = path.resolve(
+      __dirname,
+      '../templates/' + slug + '.html'
+    );
+
+    const templateData = {
+      ...req.body,
+      // country: countryList.find((country) => country.code === req.body.country)
+      //   ?.name,
+      // placeOfBirth: 'Mun. Dej Jud. Cluj',
+      // series: 'SS',
+      // number: '099994',
+      // issuedBy: 'D.E.P.A.B.D.',
+      // todayDate: '27.06.2024',
+      documentsImages: [],
+    };
+
+    const templateHtml = readFileSync(templateFile, 'utf8');
+    const template = compile(templateHtml);
+    const html = template(templateData);
+
+    const browser = await puppeteer.launch({
+      args: ['--no-sandbox'],
+      headless: true,
+    });
+    const page = await browser.newPage();
+    await page.goto(`data:text/html;charset=UTF-8,${html}`, {
+      waitUntil: 'networkidle0',
+    });
+
+    const pdf = await page.pdf({
+      displayHeaderFooter: false,
+      format: 'A4',
+      printBackground: true,
+    });
+    await browser.close();
+
+    return res.status(200).send(pdf);
+  } catch (error) {
+    return res.status(500).send(error);
+  }
 }

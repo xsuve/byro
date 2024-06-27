@@ -44,7 +44,7 @@ const ProcessCard: React.FC<ProcessCardProps> = ({
             <Text size='sm' color='gray'>
               {t('platform:process_card.last_checked')}
             </Text>
-            <Text size='sm'>11 noiembrie, 2024</Text>
+            <Text size='sm'>15 iunie, 2024</Text>
           </div>
           <Badge variant='soft'>{t(category.title)}</Badge>
         </div>

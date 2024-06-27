@@ -14,7 +14,7 @@ const triggerVariants = cva(
     'border border-zinc-300 hover:border-zinc-500',
     'bg-white transition-colors',
     'flex items-center justify-between',
-    'w-full placeholder:text-zinc-300',
+    'w-full min-w-[10rem] placeholder:text-zinc-300',
     'file:border-0 file:bg-transparent file:text-sm file:font-medium',
     'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-zinc-300',
     'disabled:cursor-not-allowed disabled:opacity-50',

@@ -10,11 +10,14 @@ interface StepsState {
   setActiveStepSlug: (slug: string) => void;
   nextStep: () => void;
   prevStep: () => void;
+  resetSteps: () => void;
 }
 
 const useSteps = create<StepsState>((set) => ({
   steps: [],
   setSteps: (steps) => set({ steps, currentStep: steps[0] }),
+  resetSteps: () =>
+    set({ steps: [], currentStep: undefined, currentStepIndex: 0 }),
   currentStepIndex: 0,
   setCurrentStepIndex: (index) =>
     set((state) => ({

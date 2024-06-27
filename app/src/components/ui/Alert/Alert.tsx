@@ -10,8 +10,8 @@ import { achromaticColors } from '../theme';
 const alertVariants = (color: AlertColors) =>
   cva(
     [
-      'relative w-full',
-      'p-4',
+      'relative w-fit',
+      'py-4 pl-4 pr-6',
       'rounded-md',
       [
         // @ts-ignore
